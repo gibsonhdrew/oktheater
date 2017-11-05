@@ -18,6 +18,7 @@ body {
 .mainNav {
     list-style: none;
     display: inline-block;  
+    border: 2px solid blue;
     padding-left: 0;
     width: 70%;
     margin-left: 50px;

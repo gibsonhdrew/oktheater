@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className='oktHeader'>
-            <span className="oktTitle">Nature Theater of Oklahoma</span>
+            <h3 className="oktTitle">Nature Theater of Oklahoma</h3>
             <ul className="mainNav">
                 <li>Home</li>
                 <li>We are OK</li>
