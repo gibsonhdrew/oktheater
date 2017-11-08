@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import Weareok from './modules/Weareok'
+import Oktheater from './modules/Oktheater'
+import Okvideo from './modules/Okvideo'
+import Okradio from './modules/Okradio'
+import Okbooks from './modules/Okbooks'
+import Contacts from './modules/Contacts'
 import logo from './images/logo.jpg';
 
 class App extends Component {
@@ -23,11 +29,9 @@ const Root = (props) => (
 )
 
 const Header = (props) => (
-    <div className='oktHeader' {...props}>
+    <div className='oktHeader fades' {...props}>
         <Link to='/'>
-            <img src={logo} alt='logo' style={{
-                width: "25%"
-            }}></img>
+            <img src={logo} alt='logo' className='logo'/>
         </Link>
         <ul className="mainNav">
             <Link to='/we-are-ok'><li>We&#39;re OK</li></Link>
@@ -40,50 +44,13 @@ const Header = (props) => (
 )
 
 const Main = (props) => (
-    <div> 
+    <div className='mainBody'> 
         <Route path='/we-are-ok' component={Weareok}/>
         <Route path='/oktheater' component={Oktheater}/>
         <Route path='/okvideo' component={Okvideo}/>
         <Route path='/okradio' component={Okradio}/>
         <Route path='/okbooks' component={Okbooks}/>
         <Route path='/contacts' component={Contacts}/>
-    </div>
-)
-
-const Weareok = (props) => (
-    <div {...props}>
-        <p>We are ok</p>
-        <Link to='/contacts'><p>..Contacts</p></Link>
-    </div>
-)
-
-const Oktheater = (props) => (
-    <div {...props}>
-        <p>Ok Theater</p>
-    </div>
-)
-
-const Okvideo = (props) => (
-    <div {...props}>
-        <p>Ok Video</p>
-    </div>
-)
-
-const Okradio = (props) => (
-    <div {...props}>
-        <p>Ok Radio</p>
-    </div>
-)
-
-const Okbooks = (props) => (
-    <div {...props}>
-        <p>Ok Books</p>
-    </div>
-)
-
-const Contacts = (props) => (
-    <div {...props}>
-        <p>Contacts</p>
     </div>
 )
 
