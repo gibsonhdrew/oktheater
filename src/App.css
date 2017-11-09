@@ -143,6 +143,7 @@ p {
 
     .pageTitle {
         width: 50vw;
+        text-align: center;
     }
 
     /* MOBILE NAVBAR */
@@ -198,6 +199,7 @@ p {
     .aboutBody {
         margin-left: 20px;
         min-width: 0px;
+        width: 90vw;
         width: 90vw;
         margin-right: 20px;
     }
