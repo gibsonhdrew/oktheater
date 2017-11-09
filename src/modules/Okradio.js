@@ -4,7 +4,7 @@ class Okradio extends Component {
     render() {  
         return (
             <div className='okrBody fades'>
-                <h2>OK Radio</h2>
+                <h2 className='pageTitle'>OK Radio</h2>
             </div>
         )
     }

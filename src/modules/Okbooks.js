@@ -4,7 +4,7 @@ class Okbooks extends Component {
     render() {  
         return (
             <div className='okbBody fades'>
-                <h2>OK Books</h2>
+                <h2 className='pageTitle'>OK Books</h2>
             </div>
         )
     }

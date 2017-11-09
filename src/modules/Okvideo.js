@@ -4,7 +4,7 @@ class Okvideo extends Component {
     render() {  
         return (
             <div className='okvBody fades'>
-                <h2>OK Video</h2>
+                <h2 className='pageTitle'>OK Video</h2>
             </div>
         )
     }

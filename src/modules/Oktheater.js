@@ -4,7 +4,7 @@ class Oktheater extends Component {
     render() {  
         return (
             <div className='oktBody fades'>
-                <h2>OK Theater</h2>
+                <h2 className='pageTitle'>OK Theater</h2>
             </div>
         )
     }
