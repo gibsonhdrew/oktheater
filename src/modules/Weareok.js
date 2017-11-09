@@ -13,7 +13,7 @@ class Weareok extends Component {
                 <p className='attribution'>-The Village Voice</p>
                 <p className='pressQuote'>At a time when even Off Off Broadway productions seem infatuated with technology and spectacle, [Nature Theater of Oklahoma&#8217;s] bare-bones vision recalls the &quot;poor theater&quot; of the 1970&#8217;s.. the focus is on the young actors&#8217; voices and bodies. They animate the emptiness of the theater with a bravura physicality.</p>  
                 <p className='attribution'>-The New York Times</p>
-                <Link to='/contacts'><p>..Contacts</p></Link>
+                <Link to='/contacts'><p>Contacts Link goes here</p></Link>
             </div>
         )
     }

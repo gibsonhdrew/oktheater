@@ -34,11 +34,21 @@ const Header = (props) => (
             <img src={logo} alt='logo' className='logo'/>
         </Link>
         <ul className="mainNav">
-            <Link to='/we-are-ok'><li>We&#39;re OK</li></Link>
-            <Link to='/oktheater'><li>OK Theater</li></Link>
-            <Link to='/okvideo'><li>OK Video</li></Link>  
-            <Link to='/okradio'><li>OK Radio</li></Link>
-            <Link to='/okbooks'><li>OK Books</li></Link>
+            <Link to='/we-are-ok'>
+                <li className='navItem'>We&#39;re OK</li>
+             </Link>
+            <Link to='/oktheater'>
+                <li className='navItem'>OK Theater</li>
+            </Link>
+            <Link to='/okvideo'>
+                <li className='navItem'>OK Video</li>
+            </Link>  
+            <Link to='/okradio'>
+                <li className='navItem'>OK Radio</li>
+            </Link>
+            <Link to='/okbooks'>
+                <li className='navItem'>OK Books</li>
+            </Link>
         </ul>
     </div>
 )
