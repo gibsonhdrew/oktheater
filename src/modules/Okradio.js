@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import okradio from '../images/pagetitles/okradio.png';
 
 class Okradio extends Component {
     render() {  
         return (
             <div className='okrBody fades'>
-                <h2 className='pageTitle'>OK Radio</h2>
+                <img src={okradio} alt='OK Radio' className='pageTitle'/>
             </div>
         )
     }

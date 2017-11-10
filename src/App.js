@@ -7,7 +7,12 @@ import Okvideo from './modules/Okvideo'
 import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
 import Contacts from './modules/Contacts'
-import logo from './images/logo.jpg';
+import logo from './images/navbar/logo.png';
+import wereok from './images/navbar/wereok.png';
+import oktheater from './images/navbar/oktheater.png';
+import okvideo from './images/navbar/okvideo.png';
+import okradio from './images/navbar/okradio.png';
+import okbooks from './images/navbar/okbooks.png';
 
 class App extends Component {
     render() {
@@ -35,19 +40,19 @@ const Header = (props) => (
         </Link>
         <ul className="mainNav">
             <Link to='/we-are-ok'>
-                <li className='navItem'>We&#39;re OK</li>
+                <img src={wereok} alt='We&#8217;re OK' className='navItem'/>
              </Link>
             <Link to='/oktheater'>
-                <li className='navItem'>OK Theater</li>
+                <img src={oktheater} alt='OK Theater' className='navItem'/>
             </Link>
             <Link to='/okvideo'>
-                <li className='navItem'>OK Video</li>
+                <img src={okvideo} alt='OK Video' className='navItem'/>
             </Link>  
             <Link to='/okradio'>
-                <li className='navItem'>OK Radio</li>
+                <img src={okradio} alt='OK Radio' className='navItem'/>
             </Link>
             <Link to='/okbooks'>
-                <li className='navItem'>OK Books</li>
+                <img src={okbooks} alt='OK Books' className='navItem'/>
             </Link>
         </ul>
     </div>

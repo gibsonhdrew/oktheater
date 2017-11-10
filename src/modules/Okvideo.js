@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import okvideo from '../images/pagetitles/okvideo.png';
 
 class Okvideo extends Component {
     render() {  
         return (
             <div className='okvBody fades'>
-                <h2 className='pageTitle'>OK Video</h2>
+                <img src={okvideo} alt='OK Video' className='pageTitle'/>
             </div>
         )
     }

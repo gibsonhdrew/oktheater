@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import contactus from '../images/pagetitles/contactus.png';
 
 class Contacts extends Component {
     render() {  
         return (
             <div className='contactsBody fades'>
-                <h2 className='pageTitle'>Contacts</h2>
+                <img src={contactus} alt='Contact Us' className='pageTitle'/>
             </div>
         )
     }
