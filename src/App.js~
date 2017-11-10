@@ -7,7 +7,7 @@ import Okvideo from './modules/Okvideo'
 import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
 import Contacts from './modules/Contacts'
-import logo from './images/navbar/logo.png';
+import logo from './images/pagetitles/logo.png';
 import wereok from './images/pagetitles/wereok.png';
 import oktheater from './images/pagetitles/oktheater.png';
 import okvideo from './images/pagetitles/okvideo.png';
