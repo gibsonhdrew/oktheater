@@ -19,7 +19,6 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            axiosResponse: ''
         };
     }
     componentDidMount() {
@@ -27,7 +26,7 @@ class App extends Component {
         axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts')
             .then(function (response) {
                 self.setState({
-                    axiosResponse: response.data 
+                    wpData: response.data 
                 })
             })
             .catch(function (error) {
@@ -35,69 +34,75 @@ class App extends Component {
             });
     }
     render() {
+        if (!this.state.wpData)
+            return null;
+
         return (
             <Router>
-                <Root>
-                    <Header/>
-                    <Main/>
-                </Root>
+                <div>
+                    <Header wpData={this.state.wpData}/>
+                    <Main wpData={this.state.wpData}/>
+                </div>
             </Router>
         );
     }
 }
 
-const Root = (props) => (
-    <div style={{
-        
-    }} {...props} />
-)
+class Header extends Component {
+    render() {
+        return (
+            <div className='oktHeader fades'>
+                <Link to='/'>
+                    <img src={logo} alt='logo' className='logo'/>
+                </Link>
+                <ul className="mainNav">
+                    <Link to='/we-are-ok'>
+                        <img src={wereok} alt='We&#8217;re OK' className='navItem'/>
+                    </Link>
+                    <Link to='/oktheater'>
+                        <img src={oktheater} alt='OK Theater' className='navItem'/>
+                    </Link>
+                    <Link to='/okvideo'>
+                        <img src={okvideo} alt='OK Video' className='navItem'/>
+                    </Link>  
+                    <Link to='/okradio'>
+                        <img src={okradio} alt='OK Radio' className='navItem'/>
+                    </Link>
+                    <Link to='/okbooks'>
+                        <img src={okbooks} alt='OK Books' className='navItem'/>
+                    </Link>
+                </ul>
+            </div>
+        );
+    }
+}
 
-const Header = (props) => (
-    <div className='oktHeader fades' {...props}>
-        <Link to='/'>
-            <img src={logo} alt='logo' className='logo'/>
-        </Link>
-        <ul className="mainNav">
-            <Link to='/we-are-ok'>
-                <img src={wereok} alt='We&#8217;re OK' className='navItem'/>
-             </Link>
-            <Link to={{
-                pathname: '/oktheater',
-                state: { message: 'panda' }
-            }}>
-                <img src={oktheater} alt='OK Theater' className='navItem'/>
-            </Link>
-            <Link to={{
-                pathname: '/okvideo',
-                state: { message: 'tortoise' }
-            }}>
-                <img src={okvideo} alt='OK Video' className='navItem'/>
-            </Link>  
-            <Link to={{
-                pathname: '/okradio',
-                state: { message: 'kangaroo' } 
-            }}>
-                <img src={okradio} alt='OK Radio' className='navItem'/>
-            </Link>
-            <Link to={{
-                pathname: '/okbooks',
-                state: { message: 'elephant' }
-            }}>
-                <img src={okbooks} alt='OK Books' className='navItem'/>
-            </Link>
-        </ul>
-    </div>
-)
-
-const Main = (props) => (
-    <div className='mainBody'> 
-        <Route path='/we-are-ok' component={Weareok}/>
-        <Route path='/oktheater' component={Oktheater}/>
-        <Route path='/okvideo' component={Okvideo}/>
-        <Route path='/okradio' component={Okradio}/>
-        <Route path='/okbooks' component={Okbooks}/>
-        <Route path='/contacts' component={Contacts}/>
-    </div>
-)
+class Main extends Component {
+    constructor(props) {
+        super(props);
+        console.log(this.props)
+    }
+    render() {
+        return (
+            <div className='mainBody'> 
+                <Route path='/we-are-ok' component={Weareok}/>
+                <Route path='/contacts' component={Contacts}/>
+                <Route exact path='/oktheater' render={(props) => (
+                    <Oktheater {...props} wpData={this.props.wpData} />
+                )}/>
+                <Route exact path='/okvideo' render={(props) => (
+                    <Okvideo {...props} wpData={this.props.wpData} />
+                )}/>
+                <Route exact path='/okradio' render={(props) => (
+                    <Okradio {...props} wpData={this.props.wpData} />
+                )}/>
+                <Route path='/okbooks' component={Okbooks}/>
+                <Route exact path='/okbooks' render={(props) => (
+                    <Okbooks {...props} wpData={this.props.wpData} />
+                )}/>
+            </div>
+        );
+    }
+}
 
 export default App;

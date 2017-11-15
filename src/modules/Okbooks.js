@@ -6,7 +6,6 @@ class Okbooks extends Component {
         return (
             <div className='okbBody fades'>
                 <img src={okbooks} alt='OK Books' className='pageTitle'/>
-                <p>{this.props.location.state.message}</p>
             </div>
         )
     }

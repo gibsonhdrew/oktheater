@@ -6,7 +6,6 @@ class Okradio extends Component {
         return (
             <div className='okrBody fades'>
                 <img src={okradio} alt='OK Radio' className='pageTitle'/>
-                <p>{this.props.location.state.message}</p>
             </div>
         )
     }
