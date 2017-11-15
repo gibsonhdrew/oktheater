@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import axios from 'axios';
 import Weareok from './modules/Weareok'
 import Oktheater from './modules/Oktheater'
 import Okvideo from './modules/Okvideo'
@@ -15,6 +16,24 @@ import okradio from './images/pagetitles/okradio.png';
 import okbooks from './images/pagetitles/okbooks.png';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            axiosResponse: ''
+        };
+    }
+    componentDidMount() {
+        var self = this;
+        axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts')
+            .then(function (response) {
+                self.setState({
+                    axiosResponse: response.data 
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
     render() {
         return (
             <Router>
@@ -42,16 +61,28 @@ const Header = (props) => (
             <Link to='/we-are-ok'>
                 <img src={wereok} alt='We&#8217;re OK' className='navItem'/>
              </Link>
-            <Link to='/oktheater'>
+            <Link to={{
+                pathname: '/oktheater',
+                state: { message: 'panda' }
+            }}>
                 <img src={oktheater} alt='OK Theater' className='navItem'/>
             </Link>
-            <Link to='/okvideo'>
+            <Link to={{
+                pathname: '/okvideo',
+                state: { message: 'tortoise' }
+            }}>
                 <img src={okvideo} alt='OK Video' className='navItem'/>
             </Link>  
-            <Link to='/okradio'>
+            <Link to={{
+                pathname: '/okradio',
+                state: { message: 'kangaroo' } 
+            }}>
                 <img src={okradio} alt='OK Radio' className='navItem'/>
             </Link>
-            <Link to='/okbooks'>
+            <Link to={{
+                pathname: '/okbooks',
+                state: { message: 'elephant' }
+            }}>
                 <img src={okbooks} alt='OK Books' className='navItem'/>
             </Link>
         </ul>

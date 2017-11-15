@@ -6,6 +6,7 @@ class Okvideo extends Component {
         return (
             <div className='okvBody fades'>
                 <img src={okvideo} alt='OK Video' className='pageTitle'/>
+                <p>{this.props.location.state.message}</p>
             </div>
         )
     }
