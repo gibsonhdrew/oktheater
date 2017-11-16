@@ -14,10 +14,13 @@ p {
     line-height: 160%;
 }   
 
+p a {
+    text-decoration: underline;
+}
+
 .pageTitle {
     height: 22px;
     opacity: 0.93;
-    margin-bottom: 10px;
     margin-top: 15px;
 }
 
@@ -69,6 +72,10 @@ p {
     cursor: pointer;
 }
 
+.postTitle {
+    font-family: 'PT Sans Bold', sans-serif;
+}
+
 /* CONTAINER FOR PAGE COMPONENTS */
 .mainBody {
     max-width: 100vw;
@@ -109,6 +116,10 @@ p {
 /* OKTHEATER PAGE */
 .oktBody {
     width: 65%;
+}
+
+.oktBody img {
+    max-width: 100%;
 }
 
 /* OKVIDEO PAGE */

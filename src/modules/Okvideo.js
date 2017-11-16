@@ -4,6 +4,7 @@ import okvideo from '../images/pagetitles/okvideo.png';
 class Okvideo extends Component {
     componentDidMount() {
         console.log(this.props.wpData)
+        console.log(this.props.wpData[0].tags[0])
     }
     render() {  
         return (

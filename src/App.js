@@ -22,7 +22,7 @@ class App extends Component {
         };
     }
     componentDidMount() {
-        var self = this;
+        var self = this
         axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts')
             .then(function (response) {
                 self.setState({
@@ -78,10 +78,6 @@ class Header extends Component {
 }
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        console.log(this.props)
-    }
     render() {
         return (
             <div className='mainBody'> 
@@ -90,7 +86,7 @@ class Main extends Component {
                 <Route exact path='/oktheater' render={(props) => (
                     <Oktheater {...props} wpData={this.props.wpData} />
                 )}/>
-                <Route exact path='/okvideo' render={(props) => (
+            <Route exact path='/okvideo' render={(props) => (
                     <Okvideo {...props} wpData={this.props.wpData} />
                 )}/>
                 <Route exact path='/okradio' render={(props) => (
