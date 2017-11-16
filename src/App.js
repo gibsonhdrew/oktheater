@@ -96,7 +96,6 @@ class Main extends Component {
                 <Route exact path='/okradio' render={(props) => (
                     <Okradio {...props} wpData={this.props.wpData} />
                 )}/>
-                <Route path='/okbooks' component={Okbooks}/>
                 <Route exact path='/okbooks' render={(props) => (
                     <Okbooks {...props} wpData={this.props.wpData} />
                 )}/>
