@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import oktheater from '../images/pagetitles/oktheater.png';
 import hr2 from '../images/hr2.png';
+import previous from '../images/previous.png';
 
 
 class Oktheater extends Component {
@@ -12,6 +13,8 @@ class Oktheater extends Component {
     componentDidMount() {
         var posts = []
         var slugs = []
+        var previousPosts = []
+        var previousSlugs = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 14694) { // wp tag 'theater'
@@ -24,7 +27,22 @@ class Oktheater extends Component {
             postCount: posts.length / 2,
             postSlugs: slugs
         })
-        for (var i=0;i<8;i++) { posts.push('') } // buffer 
+        if (posts.length > 8) {
+            for (let i=8;i<posts.length;i+=2){
+                previousPosts.push(posts[i])
+            }
+            for (let i=4;i<slugs.length;i++){
+                previousSlugs.push(slugs[i])
+            }
+        }
+        var postSlugs = []
+        for (let i=0;i<previousPosts.length;i++){
+            postSlugs.push({post: previousPosts[i], slug: previousSlugs[i]})
+        }
+        this.setState({
+            previousPostObj: postSlugs
+        })
+        for (let i=0;i<8;i++) { posts.push('') } // buffer 
         this.setState({ 
             bodyPosts: posts 
         })
@@ -68,6 +86,20 @@ class Oktheater extends Component {
                 </Link>
                 <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[7]}}/>
                 <img src={hr2} alt='-----' style={hrImg4}/>
+
+                <img src={previous} alt='Previous:' style={hrImg4} className='pageTitle'/>
+                <div>
+                    { 
+                        this.state.previousPostObj.map(function(slug, i){
+                            return ( 
+                                <Link key={i} to={'/oktheater/'+slug.slug}>
+                                    <p className='previousLink' key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
+                                </Link> 
+                            )
+                        })
+                    }
+                </div>
+                <br/><br/>
             </div>
         )
     }

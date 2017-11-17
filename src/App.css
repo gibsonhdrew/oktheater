@@ -74,6 +74,15 @@ p a {
 
 .postTitle {
     font-family: 'PT Sans Bold', sans-serif;
+    color: #222222;
+}
+
+.previousLink {
+    font-family: 'PT Sans Bold', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 100%;
+    color: #222222;
 }
 
 /* CONTAINER FOR PAGE COMPONENTS */
