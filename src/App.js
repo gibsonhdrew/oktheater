@@ -24,7 +24,7 @@ class App extends Component {
     }
     componentDidMount() {
         var self = this
-        axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts')
+        axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts/?per_page=100')
             .then(function (response) {
                 self.setState({
                     wpData: response.data 

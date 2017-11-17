@@ -10,7 +10,7 @@ a {
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 160%;
 }   
 
@@ -134,6 +134,10 @@ p a {
 /* OKVIDEO PAGE */
 .okvBody {
     width: 65%;
+}
+
+iframe {
+    width: 100%;
 }
 
 /* OKRADIO PAGE */
