@@ -95,14 +95,23 @@ class Main extends Component {
                 <Route exact path='/okvideo' render={(props) => (
                     <Okvideo {...props} wpData={this.props.wpData} />
                 )}/>
+                    <Route path='/okvideo/:ok' render={(props) => (
+                        <Post {...props} wpData={this.props.wpData} />
+                    )}/>
 
                 <Route exact path='/okradio' render={(props) => (
                     <Okradio {...props} wpData={this.props.wpData} />
                 )}/>
+                    <Route path='/okradio/:ok' render={(props) => (
+                        <Post {...props} wpData={this.props.wpData} />
+                    )}/>
 
                 <Route exact path='/okbooks' render={(props) => (
                     <Okbooks {...props} wpData={this.props.wpData} />
                 )}/>
+                    <Route path='/okbooks/:ok' render={(props) => (
+                        <Post {...props} wpData={this.props.wpData} />
+                    )}/>
 
             </div>
         );
