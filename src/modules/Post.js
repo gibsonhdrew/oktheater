@@ -18,19 +18,19 @@ class Post extends Component {
             .replace('/news/','')
         //refactor the following when you get the chance
         if (this.props.location.pathname.includes('/oktheater/')) {
-            backTo = 'oktheater'
+            backTo = '/oktheater'
         }
         if (this.props.location.pathname.includes('/okvideo/')) {
-            backTo = 'okvideo'
+            backTo = '/okvideo'
         }
         if (this.props.location.pathname.includes('/okradio/')) {
-            backTo = 'okradio'
+            backTo = '/okradio'
         }
         if (this.props.location.pathname.includes('/okbooks/')) {
-            backTo = 'okbooks'
+            backTo = '/okbooks'
         }
         if (this.props.location.pathname.includes('/news/')) {
-            backTo = 'news'
+            backTo = ''
         }
         this.setState({
             route: keyword,
@@ -51,7 +51,7 @@ class Post extends Component {
                 <h1 dangerouslySetInnerHTML={{ __html: this.state.postTitle}}
                     className='postTitle' />
                 <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
-                <Link to={'/'+this.state.backToLink+'/'}>
+                <Link to={this.state.backToLink+'/'}>
                     <img src={back} alt='back' className='pageTitle'/>
                 </Link>
                 <br/>   

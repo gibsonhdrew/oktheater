@@ -101,7 +101,9 @@ p a {
 }
 
 iframe {
-    width: 100%;
+    display: block;
+    height: 400px;
+    max-width: 100%;
 }
 
 /* ABOUT PAGE */
@@ -133,15 +135,46 @@ iframe {
 
 /* HOME PAGE */
 .homeBody {
-    width: 65%;
-    margin-left: -55px /* cancels out .mainBody padding */
+    margin-left: -55px; /* cancels out .mainBody padding */
+    margin-top: -18px; /* cancels out .mainBody padding */
+    background-color: #EDEDED;
+}
+
+.homeTop {
+    width: 100%;
+    display: flex;
+    height: 500px;
+}
+
+.featuredBox {
+    width: 70%;
+}
+
+.newsBox {
+    width: 30%;
+    padding-left: 25px;
+    padding-top: 10px;
+    background-color: #FFFFFF;
+}
+
+.newsBox p {
+    font-family: 'PT Sans Bold', sans-serif;
+    color: #555555;
+    max-width: 88%;
+    font-size: 20px;
+}
+
+.newsBox p:hover {
 }
 
 .homeImg {
-    border: 2px solid blue;
     width: 100%;
-    height: 420px;
+    width: 100%;
     object-fit: cover;
+    margin-bottom: -140px; /* determines title placement */
+    opacity: 0.8;
+    z-index: 10;
+    height: 500px;
 }
 
 .homeBody img {
@@ -149,8 +182,17 @@ iframe {
 }
 
 .featuredTitle {
-
+    display: relative;
+    margin-left: 55px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 6px #333333;
+    width: 90%;
+    height: 140px;
+    font-size: 44px;
+    opacity: 0.99;
+    z-index: 11;
 }
+
 /* OKTHEATER PAGE */
 .oktBody {
     width: 65%;
@@ -198,9 +240,16 @@ iframe {
 @media screen and (max-width: 800px) {
 
     p {
-    l   font-size: 18px;
+        font-size: 18px;
         max-width: 96vw;
     }
+
+    iframe {
+        display: block;
+        max-height: 180px;
+        max-width: 100%;
+    }
+
 
     .pageTitle {
         height: 20px;

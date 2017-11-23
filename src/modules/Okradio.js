@@ -17,7 +17,7 @@ class Okradio extends Component {
         var previousSlugs = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
-            if (data[i].tags[0] === 275) { // wp tag 'video'
+            if (data[i].tags[0] === 275) { // wp tag 'radio'
                 posts.push(data[i].title.rendered)
                 posts.push(data[i].content.rendered)
                 slugs.push(data[i].slug)
