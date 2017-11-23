@@ -42,6 +42,9 @@ class App extends Component {
         return (
             <Router>
                 <div>
+                    <div>
+                        <ScrollToTopOnNav/>
+                    </div>    
                     <Header wpData={this.state.wpData}/>
                     <Main wpData={this.state.wpData}/>
                 </div>
@@ -124,5 +127,21 @@ class Main extends Component {
         );
     }
 }
+
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
+
+  render() {
+    return null
+  }
+}
+
+const ScrollToTopOnNav = () => (
+  <Route component={ScrollToTop}/>
+)
 
 export default App;

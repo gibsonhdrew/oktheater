@@ -35,12 +35,12 @@ class Okvideo extends Component {
                 previousSlugs.push(slugs[i])
             }
         }
-        var postSlugs = []
+        var prevPostsArray = []
         for (let i=0;i<previousPosts.length;i++){
-            postSlugs.push({post: previousPosts[i], slug: previousSlugs[i]})
+            prevPostsArray.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
         this.setState({
-            previousPostObj: postSlugs
+            previousPostObj: prevPostsArray
         })
         for (let i=0;i<8;i++) { posts.push('') } // buffer 
         this.setState({ 
