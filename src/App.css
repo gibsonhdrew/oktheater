@@ -85,6 +85,11 @@ p a {
     color: #222222;
 }
 
+.whiteBkg {
+    padding-top: 10px;
+    padding-left: 55px;
+    margin-left: -55px;
+}
 /* CONTAINER FOR PAGE COMPONENTS */
 .mainBody {
     max-width: 100vw;
@@ -93,6 +98,10 @@ p a {
     background-color: #F7F7F7;
     margin-top: 50px;
     padding-left: 55px;
+}
+
+iframe {
+    width: 100%;
 }
 
 /* ABOUT PAGE */
@@ -122,6 +131,26 @@ p a {
     height: 18px;
 }
 
+/* HOME PAGE */
+.homeBody {
+    width: 65%;
+    margin-left: -55px /* cancels out .mainBody padding */
+}
+
+.homeImg {
+    border: 2px solid blue;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.homeBody img {
+    max-width: 100%;
+}
+
+.featuredTitle {
+
+}
 /* OKTHEATER PAGE */
 .oktBody {
     width: 65%;
@@ -134,10 +163,6 @@ p a {
 /* OKVIDEO PAGE */
 .okvBody {
     width: 65%;
-}
-
-iframe {
-    width: 100%;
 }
 
 /* OKRADIO PAGE */
@@ -173,7 +198,7 @@ iframe {
 @media screen and (max-width: 800px) {
 
     p {
-        font-size: 16px;
+    l   font-size: 18px;
         max-width: 96vw;
     }
 
@@ -239,8 +264,37 @@ iframe {
         max-width: 100vw;
     }
 
-    /* ABOUT PAGE */
-    .aboutBody {
+    /* HOME PAGE MOBILE*/
+    .homeBody {
+        margin-left: 0px;
+        width: 93vw;
+    }
+
+    .oktBody {
+        width: 93vw;
+    }
+
+    .okrBody {
+        width: 93vw;
+    }
+
+    .okvBody {
+        width: 93vw;
+    }
+
+    .okbBody {
+        width: 93vw;
+    }
+    .okbBody img {
+        max-width: 100%;
+    }
+
+    .contactsBody {
+        width: 93vw;
+    }
+
+    /* ABOUT PAGE MOBILE*/
+    .aboutBody, {
         min-width: 0px;
         width: 93vw;
         margin-right: 20px;

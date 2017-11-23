@@ -15,6 +15,7 @@ class Post extends Component {
             .replace('/okvideo/','')
             .replace('/okradio/','')
             .replace('/okbooks/','')
+            .replace('/news/','')
         //refactor the following when you get the chance
         if (this.props.location.pathname.includes('/oktheater/')) {
             backTo = 'oktheater'
@@ -27,6 +28,9 @@ class Post extends Component {
         }
         if (this.props.location.pathname.includes('/okbooks/')) {
             backTo = 'okbooks'
+        }
+        if (this.props.location.pathname.includes('/news/')) {
+            backTo = 'news'
         }
         this.setState({
             route: keyword,

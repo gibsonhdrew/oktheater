@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import okradio from '../images/pagetitles/okradio.png';
 import hr2 from '../images/hr2.png';
+import news from '../images/news.png';
 import previous from '../images/previous.png';
 
 
-class Okradio extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -17,7 +17,7 @@ class Okradio extends Component {
         var previousSlugs = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
-            if (data[i].tags[0] === 275) { // wp tag 'video'
+            if (data[i].tags[0] === 103) { // wp tag 'radio'
                 posts.push(data[i].title.rendered)
                 posts.push(data[i].content.rendered)
                 slugs.push(data[i].slug)
@@ -43,8 +43,11 @@ class Okradio extends Component {
             previousPostObj: postSlugs
         })
         for (let i=0;i<8;i++) { posts.push('') } // buffer 
+        let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        let imgUrl = imgArray[imgArray.length-1]
         this.setState({ 
-            bodyPosts: posts 
+            bodyPosts: posts, 
+            featuredImg: imgUrl
         })
     }
     render() {  
@@ -56,31 +59,30 @@ class Okradio extends Component {
            return null;
 
         return (
-            <div className='oktBody fades'>
-                <img src={okradio} alt='OK Theater' className='pageTitle'/>
+            <div className='homeBody fades'>
 
-                <Link to={'/okradio/'+this.state.postSlugs[0]}>
+                <Link to={'/news/'+this.state.postSlugs[0]}>
+                    <img src={this.state.featuredImg} className='homeImg' alt='homeImage'/>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
-                    className='postTitle' />
+                    className='featuredTitle postTitle' />
                 </Link>
-                <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[1]}}/>
                 <img src={hr2} alt='-----' style={hrImg1}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[1]}>
+                <Link to={'/news/'+this.state.postSlugs[1]}>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[2]}}
                     className='postTitle' />
                 </Link>
                 <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[3]}}/>
                 <img src={hr2} alt='-----' style={hrImg2}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[2]}>
+                <Link to={'/news/'+this.state.postSlugs[2]}>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[4]}}
                     className='postTitle' />
                 </Link>
                 <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[5]}}/>
                 <img src={hr2} alt='-----' style={hrImg3}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[3]}>
+                <Link to={'/news/'+this.state.postSlugs[3]}>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[6]}}
                     className='postTitle' />
                 </Link>
@@ -92,7 +94,7 @@ class Okradio extends Component {
                     { 
                         this.state.previousPostObj.map(function(slug, i){
                             return ( 
-                                <Link key={i} to={'/okradio/'+slug.slug}>
+                                <Link key={i} to={'/news/'+slug.slug}>
                                     <p className='previousLink' key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
                                 </Link> 
                             )
@@ -105,4 +107,4 @@ class Okradio extends Component {
     }
 }
 
-export default Okradio;
+export default Home;

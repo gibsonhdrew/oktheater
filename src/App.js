@@ -9,6 +9,7 @@ import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
 import Contacts from './modules/Contacts'
 import Post from './modules/Post'
+import Home from './modules/Home'
 import logo from './images/navbar/logo.png';
 import wereok from './images/pagetitles/wereok.png';
 import oktheater from './images/pagetitles/oktheater.png';
@@ -82,8 +83,14 @@ class Main extends Component {
     render() {
         return (
             <div className='mainBody'> 
-                <Route path='/we-are-ok' component={Weareok}/>
-                <Route path='/contacts' component={Contacts}/>
+                <Route exact path='/' render={(props) => (
+                    <Home {...props} wpData={this.props.wpData} />
+                )}/>
+                    <Route path='/news/:ok' render={(props) => (
+                        <Post {...props} wpData={this.props.wpData} />
+                    )}/>
+                <Route exact path='/we-are-ok' component={Weareok}/>
+                <Route exact path='/contacts' component={Contacts}/>
 
                 <Route exact path='/oktheater' render={(props) => (
                     <Oktheater {...props} wpData={this.props.wpData} />
