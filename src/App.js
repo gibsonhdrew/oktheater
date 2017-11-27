@@ -11,11 +11,11 @@ import Contacts from './modules/Contacts'
 import Post from './modules/Post'
 import Home from './modules/Home'
 import logo from './images/navbar/logo.png';
-import wereok from './images/pagetitles/wereok.png';
-import oktheater from './images/pagetitles/oktheater.png';
-import okvideo from './images/pagetitles/okvideo.png';
-import okradio from './images/pagetitles/okradio.png';
-import okbooks from './images/pagetitles/okbooks.png';
+import wereok from './images/navbar/wereok.png';
+import oktheater from './images/navbar/oktheater.png';
+import okvideo from './images/navbar/okvideo.png';
+import okradio from './images/navbar/okradio.png';
+import okbooks from './images/navbar/okbooks.png';
 
 class App extends Component {
     constructor(props) {
@@ -61,20 +61,25 @@ class Header extends Component {
                     <img src={logo} alt='logo' className='logo'/>
                 </Link>
                 <ul className="mainNav">
-                    <Link to='/we-are-ok'>
+                    <Link className='navLink' to='/we-are-ok'>
                         <img src={wereok} alt='We&#8217;re OK' className='navItem'/>
+                        <div className='lineHide'/>
                     </Link>
-                    <Link to='/oktheater'>
+                    <Link className='navLink' to='/oktheater'>
                         <img src={oktheater} alt='OK Theater' className='navItem'/>
+                        <div className='lineHide'/>
                     </Link>
-                    <Link to='/okvideo'>
+                    <Link className='navLink' to='/okvideo'>
                         <img src={okvideo} alt='OK Video' className='navItem'/>
+                        <div className='lineHide'/>
                     </Link>  
-                    <Link to='/okradio'>
+                    <Link className='navLink' to='/okradio'>
                         <img src={okradio} alt='OK Radio' className='navItem'/>
+                        <div className='lineHide'/>
                     </Link>
-                    <Link to='/okbooks'>
+                    <Link className='navLink' to='/okbooks'>
                         <img src={okbooks} alt='OK Books' className='navItem'/>
+                        <div className='lineHide'/>
                     </Link>
                 </ul>
             </div>
