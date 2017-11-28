@@ -48,11 +48,14 @@ class Post extends Component {
     render() {  
         return (
             <div className='oktBody fades'>
-                <h1 dangerouslySetInnerHTML={{ __html: this.state.postTitle}}
-                    className='postTitle' />
-                <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
+                <div className='pageBody'>
+                    <h1 dangerouslySetInnerHTML={{ __html: this.state.postTitle}}
+                        className='postTitle' />
+                    <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
+                    <br/>
+                </div>
                 <Link to={this.state.backToLink+'/'}>
-                    <img src={back} alt='back' className='pageTitle'/>
+                    <img src={back} alt='back' className='backButton'/>
                 </Link>
                 <br/>   
                 <br/>

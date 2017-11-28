@@ -91,23 +91,18 @@ p a {
 }
 
 .postTitle {
-    font-family: 'PT Sans Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #222222;
 }
 
 .previousLink {
-    font-family: 'PT Sans Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 24px;
     line-height: 100%;
     color: #222222;
 }
 
-.whiteBkg {
-    padding-top: 10px;
-    padding-left: 55px;
-    margin-left: -55px;
-}
 /* CONTAINER FOR PAGE COMPONENTS */
 .mainBody {
     max-width: 100vw;
@@ -118,10 +113,38 @@ p a {
     padding-left: 55px;
 }
 
+.pageBody img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.backButton {
+    max-height: 25px;
+    width: auto;
+}
+
+.mainBody .wp-caption {
+    min-width: 100%;
+}
+
+.mainBody .size-full, .mainBody .wp-image-68 {
+    min-width: 100%;
+}
+
 iframe {
     display: block;
     height: 400px;
     max-width: 100%;
+}
+
+.youtube-player {
+    height: 500px;
+}
+
+.embed-vimeo iframe {
+    min-width: 100%;
+    height: 450px;
 }
 
 /* ABOUT PAGE */
@@ -178,26 +201,34 @@ iframe {
 
 .newsBox {
     width: 30%;
-    padding-left: 25px;
-    padding-top: 10px;
+    padding-left: 15px;
+    padding-top: 0px;
     background-color: #FFFFFF;
+    border: 4px solid blue;
+    height: 200%;
 }
 
 .newsBox p {
-    font-family: 'PT Sans Bold', sans-serif;
-    color: #555555;
+    font-family: 'Roboto', sans-serif;
+    color: #444444;
     max-width: 88%;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 140%;
 }
 
 .newsBox p:hover {
 }
 
+.thumbDiv {
+    border: 4px solid violet;
+    height: 400px;
+}
 .homeImg {
     width: 100%;
     width: 100%;
     object-fit: cover;
-    margin-bottom: -140px; /* determines title placement */
+    margin-bottom: -150px; /* determines title placement */
     opacity: 0.8;
     z-index: 10;
     height: 500px;
@@ -213,19 +244,16 @@ iframe {
     color: #FFFFFF;
     text-shadow: 2px 2px 6px #333333;
     width: 90%;
-    height: 140px;
-    font-size: 44px;
+    height: 128px;
+    font-size: 36px;
     opacity: 0.99;
     z-index: 11;
+    margin-bottom:0;
 }
 
 /* OKTHEATER PAGE */
 .oktBody {
     width: 65%;
-}
-
-.oktBody img {
-    max-width: 100%;
 }
 
 /* OKVIDEO PAGE */
@@ -379,7 +407,6 @@ iframe {
     .aboutBody, {
         min-width: 0px;
         width: 93vw;
-        margin-right: 20px;
     }
 
     .pressQuote {
@@ -391,6 +418,7 @@ iframe {
         font-weight: bold;
         margin-left: 140px;
         margin-top: 0px;
+        width: 200px;
     }
 
     .aboutPic {

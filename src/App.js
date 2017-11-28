@@ -24,16 +24,26 @@ class App extends Component {
         };
     }
     componentDidMount() {
-        var self = this
+        let self = this
+        var oldPosts;
+        var allPosts;
+        axios.get('/oldposts3.json')
+            .then(function(response) {
+                oldPosts = response.data
+            })
         axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts/?per_page=100')
             .then(function (response) {
+                allPosts = response.data
+                for (let i of oldPosts) {
+                    allPosts.push(i)
+                }
                 self.setState({
-                    wpData: response.data 
+                    wpData: allPosts
                 })
             })
             .catch(function (error) {
                 console.log(error);
-            });
+            })
     }
     render() {
         if (!this.state.wpData)

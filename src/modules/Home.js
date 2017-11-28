@@ -33,12 +33,16 @@ class Home extends Component {
                 previousSlugs.push(slugs[i])
             }
         }
-        var postSlugs = []
-        for (let i=0;i<previousPosts.length;i++){
-            postSlugs.push({post: previousPosts[i], slug: previousSlugs[i]})
+        var thumbPosts = []
+        var newsPosts = []
+        for (let i=0;i<4;i++){
+            thumbPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
+        }
+        for (let i=4;i<previousPosts.length;i++){
+            newsPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
         this.setState({
-            previousPostObj: postSlugs
+            newsListObj: newsPosts
         })
         for (let i=0;i<8;i++) { posts.push('') } // buffer 
         let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
@@ -62,12 +66,14 @@ class Home extends Component {
                             <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
                                 className='featuredTitle postTitle' />
                         </Link>
+                        <div className='thumbDiv'>
+                        </div>
                     </div>
                     <div className='newsBox'>
                         <img src={news} className='pageTitle' alt='News:'/>
                         <div>
                             { 
-                                this.state.previousPostObj.map(function(slug, i){
+                                this.state.newsListObj.map(function(slug, i){
                                     return ( 
                                         <Link key={i} to={'/news/'+slug.slug}>
                                             <p key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
