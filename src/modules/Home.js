@@ -13,12 +13,14 @@ class Home extends Component {
         var slugs = []
         var previousPosts = []
         var previousSlugs = []
+        var thumbImgs = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 103) { // wp tag 'news'
                 posts.push(data[i].title.rendered)
                 posts.push(data[i].content.rendered)
                 slugs.push(data[i].slug)
+                //continue working from here
             }
         }
         this.setState({ 
@@ -42,6 +44,7 @@ class Home extends Component {
             newsPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
         this.setState({
+            thumbListObj: thumbPosts,
             newsListObj: newsPosts
         })
         for (let i=0;i<8;i++) { posts.push('') } // buffer 
@@ -61,12 +64,26 @@ class Home extends Component {
 
                 <div className='homeTop'>
                     <div className='featuredBox'>
-                        <Link to={'/news/'+this.state.postSlugs[0]}>
+                        <Link className='featuredHover' to={'/news/'+this.state.postSlugs[0]}>
                             <img src={this.state.featuredImg} className='homeImg' alt='homeImage'/>
-                            <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
-                                className='featuredTitle postTitle' />
+                            <div className='featuredTitle'>
+                                <h3 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}/>
+                            </div>
                         </Link>
                         <div className='thumbDiv'>
+                            { 
+                                this.state.thumbListObj.map(function(slug, i){
+                                    return ( 
+                                        <Link className='thumb' key={i} to={'/news/'+slug.slug}>
+                                            <div className='thumbTitle'>
+                                                <h3 key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
+                                            </div>
+                                            <div className='thumbImg'>
+                                            </div>
+                                        </Link>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div className='newsBox'>

@@ -45,6 +45,7 @@ class Post extends Component {
             }
         }
     }   
+
     render() {  
         return (
             <div className='oktBody fades'>
