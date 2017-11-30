@@ -163,8 +163,22 @@ iframe {
 }
 
 .pressQuote {
+    width: 70%;
     font-style: italic; 
     font-weight: bold;
+    margin-top: 30px;
+    background-color: #EDEDED;
+    padding: 7px;
+}
+
+.villagevoice { margin-left: 5%; }
+.nyt { margin-left: 22%; }
+
+.aboutHrs .hr2, .aboutHrs .hr3 { width: 100%; } 
+
+.aboutHrs .hr3 {
+    display: none;
+    width: 100%;
 }
 
 .attribution {
@@ -576,15 +590,25 @@ iframe {
     }
 
     .pressQuote {
+        width: 96%;
         font-style: italic; 
         font-weight: bold;
-        margin-top: 40px;
+        margin-top: 30px;
+        background-color: #EDEDED;
+        padding: 7px;
     }
 
-    .attribution {
-        font-weight: bold;
-        margin-left: 200px;
-        margin-top: -20px;
+    .villagevoice { margin-left: 0%; }
+    .nyt { margin-left: 0%; }
+
+
+    .aboutHrs .hr2 {
+        display:none;
+        width: 100%;
+    }
+    .aboutHrs .hr3 {
+        width: 100%;
+        display: block;
     }
 
     .aboutPic {
