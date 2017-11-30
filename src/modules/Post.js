@@ -38,9 +38,42 @@ class Post extends Component {
         })
         for (let i=0;i<data.length;i++){
             if (data[i].slug === keyword) {
+                console.log(data[i].date)
+                let year = data[i].date.substring(0,4)
+                console.log('year: '+year)
+                let month = data[i].date.substring(5,7).replace(/^0+/, '')
+                if (month === '1') {
+                    month = 'January'
+                } else if (month === '2') {
+                    month = 'February'
+                } else if (month === '3') {
+                    month = 'March'
+                } else if (month === '4') {
+                    month = 'April'
+                } else if (month === '5') {
+                    month = 'May'
+                } else if (month === '6') {
+                    month = 'June'
+                } else if (month === '7') {
+                    month = 'July'
+                } else if (month === '8') {
+                    month = 'August'
+                } else if (month === '9') {
+                    month = 'September'
+                } else if (month === '10') {
+                    month = 'October'
+                } else if (month === '11') {
+                    month = 'November'
+                } else if (month === '12') {
+                    month = 'December'
+                }
+                console.log('month: '+month)
+                let day = data[i].date.substring(8,10).replace(/^0+/, '')
+                console.log('day: '+day)
                 this.setState({
                     postTitle : data[i].title.rendered,
-                    postText : data[i].content.rendered
+                    postText : data[i].content.rendered,
+                    postDate : month+' '+day+', '+year
                 })
             }
         }
@@ -52,6 +85,8 @@ class Post extends Component {
                 <div className='pageBody'>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.postTitle}}
                         className='postTitle' />
+                    <h4 dangerouslySetInnerHTML={{ __html: this.state.postDate}}
+                        className='postDate' />
                     <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
                     <br/>
                 </div>

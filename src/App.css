@@ -96,6 +96,13 @@ p a {
     color: #222222;
 }
 
+.postDate {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 130%;
+    color: #999999;
+    margin-top: -14px;
+}
+
 .previousLink {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
