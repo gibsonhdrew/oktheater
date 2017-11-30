@@ -59,47 +59,49 @@ class Okradio extends Component {
             <div className='oktBody fades'>
                 <img src={okradio} alt='OK Theater' className='pageTitle'/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[0]}>
-                    <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
-                    className='postTitle' />
-                </Link>
-                <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[1]}}/>
-                <img src={hr2} alt='-----' style={hrImg1}/>
+                <div className='pageBody'>
+                    <Link to={'/okradio/'+this.state.postSlugs[0]}>
+                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
+                        className='postTitle' />
+                    </Link>
+                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[1]}}/>
+                    <img src={hr2} alt='-----' style={hrImg1}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[1]}>
-                    <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[2]}}
-                    className='postTitle' />
-                </Link>
-                <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[3]}}/>
-                <img src={hr2} alt='-----' style={hrImg2}/>
+                    <Link to={'/okradio/'+this.state.postSlugs[1]}>
+                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[2]}}
+                        className='postTitle' />
+                    </Link>
+                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[3]}}/>
+                    <img src={hr2} alt='-----' style={hrImg2}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[2]}>
-                    <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[4]}}
-                    className='postTitle' />
-                </Link>
-                <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[5]}}/>
-                <img src={hr2} alt='-----' style={hrImg3}/>
+                    <Link to={'/okradio/'+this.state.postSlugs[2]}>
+                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[4]}}
+                        className='postTitle' />
+                    </Link>
+                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[5]}}/>
+                    <img src={hr2} alt='-----' style={hrImg3}/>
 
-                <Link to={'/okradio/'+this.state.postSlugs[3]}>
-                    <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[6]}}
-                    className='postTitle' />
-                </Link>
-                <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[7]}}/>
-                <img src={hr2} alt='-----' style={hrImg4}/>
+                    <Link to={'/okradio/'+this.state.postSlugs[3]}>
+                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[6]}}
+                        className='postTitle' />
+                    </Link>
+                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[7]}}/>
+                    <img src={hr2} alt='-----' style={hrImg4}/>
 
-                <img src={previous} alt='Previous:' style={hrImg4} className='pageTitle'/>
-                <div>
-                    { 
-                        this.state.previousPostObj.map(function(slug, i){
-                            return ( 
-                                <Link key={i} to={'/okradio/'+slug.slug}>
-                                    <p className='previousLink' key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
-                                </Link> 
-                            )
-                        })
-                    }
+                    <img src={previous} alt='Previous:' style={hrImg4} className='pageTitle'/>
+                    <div>
+                        { 
+                            this.state.previousPostObj.map(function(slug, i){
+                                return ( 
+                                    <Link key={i} to={'/okradio/'+slug.slug}>
+                                        <p className='previousLink' key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
+                                    </Link> 
+                                )
+                            })
+                        }
+                    </div>
+                    <br/><br/>
                 </div>
-                <br/><br/>
             </div>
         )
     }
