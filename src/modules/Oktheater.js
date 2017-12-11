@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import oktheater from '../images/pagetitles/oktheater.png';
-import hr2 from '../images/hr2.png';
 import previous from '../images/previous.png';
 
 
@@ -11,48 +10,43 @@ class Oktheater extends Component {
         this.state = {};
     }
     componentDidMount() {
-        var posts = []
+        var postTitles = []
+        var postImages = []
         var slugs = []
+        var currentPosts = []
         var previousPosts = []
         var previousSlugs = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 14694) { // wp tag 'theater'
-                posts.push(data[i].title.rendered)
-                posts.push(data[i].content.rendered)
+                postTitles.push(data[i].title.rendered)
                 slugs.push(data[i].slug)
+                let imgArray = data[i].content.rendered.match('data-orig-file=\\"https://(.*).jpg')[0].split(' ')
+                postImages.push(imgArray[imgArray.length-1])
             }
         }
-        this.setState({ 
-            postCount: posts.length / 2,
-            postSlugs: slugs
-        })
-        if (posts.length > 8) {
-            for (let i=8;i<posts.length;i+=2){
-                previousPosts.push(posts[i])
+        for (let i=0;i<postImages.length;i++){
+            currentPosts.push({title: postTitles[i], img: postImages[i], url: slugs[i]})
+        }
+        if (postTitles.length > 4) {
+            for (let i=16;i<postTitles.length;i++){
+                previousPosts.push(postTitles[i])
             }
-            for (let i=4;i<slugs.length;i++){
+            for (let i=16;i<slugs.length;i++){
                 previousSlugs.push(slugs[i])
             }
         }
-        var postSlugs = []
+        var prevPosts = []
         for (let i=0;i<previousPosts.length;i++){
-            postSlugs.push({post: previousPosts[i], slug: previousSlugs[i]})
+            prevPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
-        this.setState({
-            previousPostObj: postSlugs
-        })
-        for (let i=0;i<8;i++) { posts.push('') } // buffer 
         this.setState({ 
-            bodyPosts: posts 
+            currentPosts: currentPosts, 
+            previousPostObj: prevPosts
         })
     }
     render() {  
-        if (this.state.postCount <= 4) { var hrImg4 = { opacity: 0 } }
-        if (this.state.postCount <= 3) { var hrImg3 = { opacity: 0 } }
-        if (this.state.postCount <= 2) { var hrImg2 = { opacity: 0 } }
-        if (this.state.postCount <= 1) { var hrImg1 = { opacity: 0 } }
-        if (!this.state.bodyPosts)
+        if (!this.state.currentPosts)
            return null;
 
         return (
@@ -60,35 +54,21 @@ class Oktheater extends Component {
                 <img src={oktheater} alt='OK Theater' className='pageTitle'/>
 
                 <div className='pageBody'>
-                    <Link to={'/oktheater/'+this.state.postSlugs[0]}>
-                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}
-                        className='postTitle' />
-                    </Link>
-                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[1]}}/>
-                    <img src={hr2} alt='-----' style={hrImg1}/>
-
-                    <Link to={'/oktheater/'+this.state.postSlugs[1]}>
-                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[2]}}
-                        className='postTitle' />
-                    </Link>
-                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[3]}}/>
-                    <img src={hr2} alt='-----' style={hrImg2}/>
-
-                    <Link to={'/oktheater/'+this.state.postSlugs[2]}>
-                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[4]}}
-                        className='postTitle' />
-                    </Link>
-                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[5]}}/>
-                    <img src={hr2} alt='-----' style={hrImg3}/>
-
-                    <Link to={'/oktheater/'+this.state.postSlugs[3]}>
-                        <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[6]}}
-                        className='postTitle' />
-                    </Link>
-                    <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[7]}}/>
-                    <img src={hr2} alt='-----' style={hrImg4}/>
-
-                    <img src={previous} alt='Previous:' style={hrImg4} className='pageTitle'/>
+                    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-between',width:'80vw'}}>
+                        { 
+                            this.state.currentPosts.map(function(slug, i){
+                                return ( 
+                                    <div style={{width:'24%',height:'200px',backgroundColor:'white',marginTop:'20px'}}>
+                                      <Link key={i} to={'/oktheater/'+slug.url}>
+                                          <img src={slug.img} alt='Img' style={{height: '84%',objectFit:'cover'}}/>
+                                          <p key={i} style={{fontSize:'16px',marginTop:'4px',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
+                                      </Link> 
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    <br/>
                     <div>
                         { 
                             this.state.previousPostObj.map(function(slug, i){
