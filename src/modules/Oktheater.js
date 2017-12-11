@@ -54,14 +54,14 @@ class Oktheater extends Component {
                 <img src={oktheater} alt='OK Theater' className='pageTitle'/>
 
                 <div className='pageBody'>
-                    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-between',width:'80vw'}}>
+                    <div className='postGrid' style={{display:'flex',flexWrap:'wrap',justifyContent:'space-between'}}>
                         { 
                             this.state.currentPosts.map(function(slug, i){
                                 return ( 
-                                    <div style={{width:'24%',height:'200px',backgroundColor:'white',marginTop:'20px'}}>
+                                    <div className='gridMap' style={{backgroundColor:'white',marginTop:'20px'}}>
                                       <Link key={i} to={'/oktheater/'+slug.url}>
                                           <img src={slug.img} alt='Img' style={{height: '84%',objectFit:'cover'}}/>
-                                          <p key={i} style={{fontSize:'16px',marginTop:'4px',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
+                                          <p key={i} style={{color:'#222222',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
                                       </Link> 
                                     </div>
                                 )
