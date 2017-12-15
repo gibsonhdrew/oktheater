@@ -23,16 +23,21 @@ p a {
 }
 
 .postGrid {
-  width: 80vw;
+  width: 88vw;
 }
 
 .gridMap {
-  width: 24%;
-  height: 200px;
+  width: 23%;
+  height: 230px;
 }
 
-.gridMap p {
-  margin-top: 4px;
+.gridMapVideo {
+  width: 31%;
+  height: 275px;
+}
+
+.gridMap p, .gridMapVideo p {
+  margin-top: 1px;
   font-size: 16px;
 }
 
@@ -424,7 +429,12 @@ iframe {
       height: 250px;
     }
 
-    .gridMap p {
+    .gridMapVideo {
+      width: 100%;
+      height: 250px;
+    }
+
+    .gridMap p, .gridMapVideo p {
       margin-top: 7px;
       font-size: 18px;
     }

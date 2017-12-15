@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import oktheater from '../images/pagetitles/oktheater.png';
-import previous from '../images/previous.png';
 
 
 class Oktheater extends Component {
@@ -54,13 +53,13 @@ class Oktheater extends Component {
                 <img src={oktheater} alt='OK Theater' className='pageTitle'/>
 
                 <div className='pageBody'>
-                    <div className='postGrid' style={{display:'flex',flexWrap:'wrap',justifyContent:'space-between'}}>
+                    <div className='postGrid' style={{display:'flex',flexWrap:'wrap'}}>
                         { 
                             this.state.currentPosts.map(function(slug, i){
                                 return ( 
-                                    <div className='gridMap' style={{backgroundColor:'white',marginTop:'20px'}}>
+                                    <div key={i} className='gridMap' style={{backgroundColor:'white',marginTop:'20px',marginRight:'12px'}}>
                                       <Link key={i} to={'/oktheater/'+slug.url}>
-                                          <img src={slug.img} alt='Img' style={{height: '84%',objectFit:'cover'}}/>
+                                          <img src={slug.img} alt='Img' style={{height: '78%',objectFit:'cover'}}/>
                                           <p key={i} style={{color:'#222222',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
                                       </Link> 
                                     </div>
