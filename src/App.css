@@ -23,7 +23,7 @@ p a {
 }
 
 .postGrid {
-  width: 88vw;
+  width: 84em;
 }
 
 .gridMap {
@@ -33,7 +33,7 @@ p a {
 
 .gridMapVideo {
   width: 31%;
-  height: 375px;
+  height: 18em;
 }
 
 .gridMap p, .gridMapVideo p {
