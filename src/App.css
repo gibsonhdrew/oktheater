@@ -23,28 +23,35 @@ p a {
 }
 
 .postGrid {
-  width: 84em;
+  width: 92em;
 }
 
 .gridMap {
-  width: 23%;
-  height: 270px;
+  width: 22em;
+  height: 20em;
+  box-shadow: 5px 5px 5px #EDEDED;
 }
 
 .gridMapVideo {
-  width: 31%;
-  height: 18em;
+  width: 29em;
+  height: 21em;
+  box-shadow: 5px 5px 5px #EDEDED;
 }
 
 .gridMap p, .gridMapVideo p {
   margin-top: 1px;
-  font-size: 18px;
+  font-size: 22px;
+}
+
+.gridMap:hover {
+  opacity: 0.8;
 }
 
 .pageTitle {
-    height: 22px;
     opacity: 0.93;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 2em;
 }
 
 /* NAVBAR */
@@ -58,6 +65,7 @@ p a {
     height: 45px;
     background-color: #FFFFFF;
     z-index: 100;
+    box-shadow: 0px 5px 5px #EDEDED;
 }
 
 .logo {
@@ -123,11 +131,10 @@ p a {
 }
 
 .previousLink {
-    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 100%;
-    color: #222222;
+    font-size: 27px;
+    line-height: 130%;
+    color: #333333;
 }
 
 /* CONTAINER FOR PAGE COMPONENTS */
@@ -186,7 +193,7 @@ iframe {
     font-style: italic; 
     font-weight: bold;
     margin-top: 30px;
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
     padding: 7px;
 }
 
@@ -220,7 +227,7 @@ iframe {
 .homeBody {
     margin-left: -55px; /* cancels out .mainBody padding */
     margin-top: -18px; /* cancels out .mainBody padding */
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
 }
 
 .homeTop {
@@ -282,10 +289,9 @@ iframe {
 }
 
 .newsBox p {
-    font-family: 'Open Sans', sans-serif;
     color: #444444;
     max-width: 88%;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 140%;
 }
@@ -295,7 +301,7 @@ iframe {
     flex-wrap: wrap;
     justify-content: space-around;
     display: flex;
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
     margin-top: 20px;
     padding: 12px;
 }
@@ -306,6 +312,7 @@ iframe {
     width:47%;
     height:46%;
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px #EDEDED;
 }
 
 .thumbDiv .thumb:hover {
@@ -313,12 +320,12 @@ iframe {
 }
 
 .thumbDiv .thumbTitle {
-    font-family: 'Open Sans', sans-serif;
     padding-left: 15px;
     padding-right: 15px;
     color: #333333;
     height: 22%;
     margin-top:-5px;
+    font-size: 20px;
 }
 
 .thumbDiv .thumbImg {
@@ -343,8 +350,7 @@ iframe {
 }
 
 .featuredTitle {
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 22px;
+    margin-left: 32px;
     color: #FFFFFF;
     text-shadow: 2px 2px 6px #333333;
     width: 90%;
@@ -537,7 +543,7 @@ iframe {
         flex-wrap: wrap;
         justify-content: space-around;
         display: flex;
-        background-color: #EDEDED;
+        background-color: #F7F7F7;
         margin-top: 20px;
         padding: 12px;
         margin-bottom: 15px;
@@ -631,7 +637,7 @@ iframe {
         font-style: italic; 
         font-weight: bold;
         margin-top: 30px;
-        background-color: #EDEDED;
+        background-color: #F7F7F7;
         padding: 7px;
     }
 

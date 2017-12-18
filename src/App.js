@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 import Weareok from './modules/Weareok'
+import Splash from './modules/Splash'
 import Oktheater from './modules/Oktheater'
 import Okvideo from './modules/Okvideo'
 import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
 import Contacts from './modules/Contacts'
 import Post from './modules/Post'
-import Home from './modules/Home'
+import News from './modules/News'
 import logo from './images/navbar/logo.png';
 import wereok from './images/navbar/wereok.png';
 import oktheater from './images/navbar/oktheater.png';
@@ -67,7 +68,7 @@ class Header extends Component {
     render() {
         return (
             <div className='oktHeader fades'>
-                <Link to='/'>
+                <Link to='/news'>
                     <img src={logo} alt='logo' className='logo'/>
                 </Link>
                 <ul className="mainNav">
@@ -102,7 +103,10 @@ class Main extends Component {
         return (
             <div className='mainBody'> 
                 <Route exact path='/' render={(props) => (
-                    <Home {...props} wpData={this.props.wpData} />
+                    <Splash {...props} wpData={this.props.wpData} />
+                )}/>
+                <Route exact path='/news' render={(props) => (
+                    <News {...props} wpData={this.props.wpData} />
                 )}/>
                     <Route path='/news/:ok' render={(props) => (
                         <Post {...props} wpData={this.props.wpData} />

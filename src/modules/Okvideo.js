@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import okvideo from '../images/pagetitles/okvideo.png';
+import hr2 from '../images/hr2.png';
+import previous from '../images/previous.png';
 
 
 class Okvideo extends Component {
@@ -40,11 +42,11 @@ class Okvideo extends Component {
         for (let i=0;i<postThumbnails.length;i++){
             currentPosts.push({title: postTitles[i], video: postThumbnails[i], url: slugs[i]})
         }
-        if (postTitles.length > 4) {
-            for (let i=16;i<postTitles.length;i++){
+        if (postTitles.length > 9) {
+            for (let i=9;i<postTitles.length;i++){
                 previousPosts.push(postTitles[i])
             }
-            for (let i=16;i<slugs.length;i++){
+            for (let i=9;i<slugs.length;i++){
                 previousSlugs.push(slugs[i])
             }
         }
@@ -52,12 +54,27 @@ class Okvideo extends Component {
         for (let i=0;i<previousPosts.length;i++){
             prevPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
+        let dispPosts = []
+        for (let i=0;i<9;i++) {
+          dispPosts.push(currentPosts[i])
+        }
         this.setState({ 
-            currentPosts: currentPosts, 
+            currentPosts: dispPosts, 
             previousPostObj: prevPosts
         })
     }
     render() {  
+        if (this.state.postCount <= 9) { 
+          var hrImg4 = { opacity: 0 } 
+          var prevText = { opacity: 0 } 
+        } else {
+          hrImg4 = { opacity: 1, width:'89em' } 
+          prevText = { 
+            opacity: 1, 
+            height:'2.5em',
+            width:'12em'
+          } 
+        }
         if (!this.state.currentPosts)
            return null;
 
@@ -81,6 +98,9 @@ class Okvideo extends Component {
                         }
                     </div>
                     <br/>
+                    <br/>
+                    <img src={hr2} alt='-----' style={hrImg4}/>
+                    <img src={previous} alt='Previous:' style={prevText} className='pageTitle'/>
                     <div>
                         { 
                             this.state.previousPostObj.map(function(slug, i){
