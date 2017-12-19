@@ -30,7 +30,7 @@ class Post extends Component {
             backTo = '/okbooks'
         }
         if (this.props.location.pathname.includes('/news/')) {
-            backTo = ''
+            backTo = 'news'
         }
         this.setState({
             route: keyword,
