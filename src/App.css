@@ -23,18 +23,18 @@ p a {
 }
 
 .postGrid {
-  width: 92em;
+  width: 84em;
 }
 
 .gridMap {
-  width: 22em;
-  height: 20em;
+  width: 20em;
+  height: 17em;
   box-shadow: 5px 5px 5px #EDEDED;
 }
 
 .gridMapVideo {
-  width: 29em;
-  height: 21em;
+  width: 27em;
+  height: 19em;
   box-shadow: 5px 5px 5px #EDEDED;
 }
 
@@ -51,7 +51,7 @@ p a {
     opacity: 0.93;
     margin-top: 20px;
     margin-bottom: 25px;
-    height: 2em;
+    height: 1.5em;
 }
 
 /* NAVBAR */

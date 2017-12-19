@@ -68,11 +68,11 @@ class Okvideo extends Component {
           var hrImg4 = { opacity: 0 } 
           var prevText = { opacity: 0 } 
         } else {
-          hrImg4 = { opacity: 1, width:'89em' } 
+          hrImg4 = { opacity: 1, width:'83em' } 
           prevText = { 
             opacity: 1, 
-            height:'2.5em',
-            width:'12em'
+            height:'2.2em',
+            width:'10em'
           } 
         }
         if (!this.state.currentPosts)
