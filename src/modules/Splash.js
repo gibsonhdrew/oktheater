@@ -17,6 +17,8 @@ class Splash extends Component {
                   marginTop: '40px',
                   zIndex:'5000',
                   boxShadow: '3px 3px 3px #ECECEC',
+                  opacity: '0.8',
+                  borderRadius: '2px'
                 }}/>
               </Link>
               <br/>

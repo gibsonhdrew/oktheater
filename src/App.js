@@ -17,6 +17,8 @@ import oktheater from './images/navbar/oktheater.png';
 import okvideo from './images/navbar/okvideo.png';
 import okradio from './images/navbar/okradio.png';
 import okbooks from './images/navbar/okbooks.png';
+import mailinglist from './images/mailinglist.png';
+import oktwitter from './images/oktwitter.png';
 
 class App extends Component {
     constructor(props) {
@@ -58,6 +60,7 @@ class App extends Component {
                     </div>    
                     <Header wpData={this.state.wpData}/>
                     <Main wpData={this.state.wpData}/>
+                    <Footer/>
                 </div>
             </Router>
         );
@@ -141,7 +144,6 @@ class Main extends Component {
                     <Route path='/okbooks/:ok' render={(props) => (
                         <Post {...props} wpData={this.props.wpData} />
                     )}/>
-
             </div>
         );
     }
@@ -158,6 +160,27 @@ class ScrollToTop extends Component {
     return null
   }
 }
+
+const Footer = (props) => (
+  <div style={{
+    width:'100vw',
+    height:'50px',
+    paddingTop:'15px',
+    paddingLeft: '50px',
+    backgroundColor:'#222222'
+  }} {...props}>
+    <a href='http://eepurl.com/tEQzX'><FooterLink src={mailinglist}/></a>
+    <a href='https://twitter.com/oktheater'><FooterLink src={oktwitter}/></a>
+  </div>
+)
+
+const FooterLink = (props) => (
+  <img style={{
+    width: '200px',
+    marginRight:'25px',
+    filter: 'invert(100%)'
+  }} alt='footerLink' {...props}/>
+) 
 
 const ScrollToTopOnNav = () => (
   <Route component={ScrollToTop}/>

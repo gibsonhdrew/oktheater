@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import okvideo from '../images/pagetitles/okvideo.png';
 import hr2 from '../images/hr2.png';
@@ -18,21 +19,46 @@ class Okvideo extends Component {
         var previousPosts = []
         var previousSlugs = []
         let data = this.props.wpData
+        let vidImages = []
+        let dispPosts = []
+        let prevPosts = []
+        let vimeoVidSwaps = []
+        let self = this;
+        let vimeoImgIndex = 0
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 412) { // wp tag 'video'
                 if (data[i].content.rendered.match('https://www.youtube.com')) {
                   let ytLink = data[i].content.rendered.match('https://www.youtube.com').input
                   ytLink = ytLink.substring(ytLink.indexOf('src')+5,ytLink.indexOf('allowfullscreen')-2)
+                  let ytId = ytLink.substring(ytLink.indexOf('embed')+6,ytLink.indexOf('?version')) 
+                  let ytImg = 'https://img.youtube.com/vi/'+ytId+'/hqdefault.jpg'
+                  vidImages.push(ytImg)
                   postThumbnails.push(ytLink)
-                } else if (data[i].content.rendered.match('http://player.vimeo.com')) {
-                  let vimeoLink = data[i].content.rendered.match('http://player.vimeo.com').input
+                } else if (data[i].content.rendered.match('player.vimeo.com')) {
+                  let vimeoLink = data[i].content.rendered.match('player.vimeo.com').input
                   vimeoLink = vimeoLink.substring(vimeoLink.indexOf('src')+5,vimeoLink.indexOf('width')-2)
-                  console.log(vimeoLink)
-                  postThumbnails.push(vimeoLink)
-                } else if (data[i].content.rendered.match('https://player.vimeo.com')) {
-                  let vimeoLink = data[i].content.rendered.match('https://player.vimeo.com').input
-                  vimeoLink = vimeoLink.substring(vimeoLink.indexOf('src')+5,vimeoLink.indexOf('width')-2)
-                  console.log(vimeoLink)
+                  let vimeoID = vimeoLink.substring(vimeoLink.indexOf('video/')+6)
+                  let vimeoImg = '' 
+                  vidImages.push(vimeoImg)
+
+                  axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
+                    .then(function(response) {
+                      vimeoImgIndex +=1
+                      vimeoVidSwaps.push({index: vimeoImgIndex, image: response.data[0].thumbnail_large})
+                      for (let j=0;j<dispPosts.length;j++) {
+                        if (dispPosts[j].img==='') {
+                          if (vimeoVidSwaps[0]) {
+                            dispPosts[j].img = vimeoVidSwaps[0].image
+                            vimeoVidSwaps.shift()
+                          }
+                        }
+                        self.setState({ 
+                            currentPosts: dispPosts 
+                        })
+                      }
+                    })
+
+                  console.log(vimeoVidSwaps)
                   postThumbnails.push(vimeoLink)
                 }
                 postTitles.push(data[i].title.rendered)
@@ -40,7 +66,7 @@ class Okvideo extends Component {
             }
         }
         for (let i=0;i<postThumbnails.length;i++){
-            currentPosts.push({title: postTitles[i], video: postThumbnails[i], url: slugs[i]})
+            currentPosts.push({title: postTitles[i], video: postThumbnails[i], url: slugs[i], img: vidImages[i]})
         }
         if (postTitles.length > 9) {
             for (let i=9;i<postTitles.length;i++){
@@ -50,11 +76,9 @@ class Okvideo extends Component {
                 previousSlugs.push(slugs[i])
             }
         }
-        var prevPosts = []
         for (let i=0;i<previousPosts.length;i++){
             prevPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
-        let dispPosts = []
         for (let i=0;i<9;i++) {
           dispPosts.push(currentPosts[i])
         }
@@ -68,7 +92,7 @@ class Okvideo extends Component {
           var hrImg4 = { opacity: 0 } 
           var prevText = { opacity: 0 } 
         } else {
-          hrImg4 = { opacity: 1, width:'83em' } 
+          hrImg4 = { opacity: 1, width:'50em' } 
           prevText = { 
             opacity: 1, 
             height:'2.2em',
@@ -87,9 +111,9 @@ class Okvideo extends Component {
                         { 
                             this.state.currentPosts.map(function(slug, i){
                                 return ( 
-                                    <div key={i} className='gridMapVideo' style={{backgroundColor:'white',marginTop:'20px',marginRight:'15px'}}>
+                                    <div key={i} className='gridMapVideo fades' style={{backgroundColor:'white',marginTop:'20px',marginRight:'15px'}}>
                                       <Link key={i} to={'/okvideo/'+slug.url}>
-                                          <iframe title='vid' src={slug.video} style={{border:'0px',height:'80%',width:'99.8%',objectFit:'cover'}}/>
+                                          <img src={slug.img} alt='img' style={{border:'0px',height:'80%',width:'100%',objectFit:'cover'}}/>
                                           <p key={i} style={{color:'#222222',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
                                       </Link> 
                                     </div>
@@ -99,7 +123,6 @@ class Okvideo extends Component {
                     </div>
                     <br/>
                     <br/>
-                    <img src={hr2} alt='-----' style={hrImg4}/>
                     <img src={previous} alt='Previous:' style={prevText} className='pageTitle'/>
                     <div>
                         { 
