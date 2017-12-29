@@ -76,7 +76,7 @@ class Home extends Component {
 }
 
 const HomeDiv = (props) => (
-  <div style={{
+  <div className='fades' style={{
     paddingTop: '25px',
     height: '600px',
     width: '94vw'
