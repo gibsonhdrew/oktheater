@@ -65,28 +65,36 @@ class Okradio extends Component {
                         className='postTitle' />
                     </Link>
                     <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[1]}}/>
+                    <br/>
                     <img src={hr2} alt='-----' style={hrImg1}/>
+                    <br/>
 
                     <Link to={'/okradio/'+this.state.postSlugs[1]}>
                         <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[2]}}
                         className='postTitle' />
                     </Link>
                     <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[3]}}/>
+                    <br/>
                     <img src={hr2} alt='-----' style={hrImg2}/>
+                    <br/>
 
                     <Link to={'/okradio/'+this.state.postSlugs[2]}>
                         <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[4]}}
                         className='postTitle' />
                     </Link>
                     <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[5]}}/>
+                    <br/>
                     <img src={hr2} alt='-----' style={hrImg3}/>
+                    <br/>
 
                     <Link to={'/okradio/'+this.state.postSlugs[3]}>
                         <h1 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[6]}}
                         className='postTitle' />
                     </Link>
                     <p dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[7]}}/>
+                    <br/>
                     <img src={hr2} alt='-----' style={hrImg4}/>
+                    <br/>
 
                     <img src={previous} alt='Previous:' style={hrImg4} className='pageTitle'/>
                     <div>

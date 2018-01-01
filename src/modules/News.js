@@ -149,13 +149,13 @@ const ShowDisplayNavArrowBox = (props) => (
 )
 
 const ShowDisplayNavArrow = (props) => (
-  <span style={{
+  <span class='showDisplayNavArrow' style={{
     position: 'absolute',
     color: 'white',
     fontWeight: 'bold',
     fontSize: '52px',
     top: '-10px',
-    paddingLeft: '27px'
+    paddingLeft: '25px'
   }} {...props} />
 )
 
