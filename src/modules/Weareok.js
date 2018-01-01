@@ -24,12 +24,6 @@ class Weareok extends Component {
                 <img className='pressQuote nyt' src={nyt} alt='quote'/>
                 <br/>
                 <br/>
-                <div className='aboutHrs'>
-                    <img src={hr2} alt='----' className='hr2' />
-                    <img src={hr3} alt='----' className='hr3' />
-                </div>
-                <br/><br/>
-                <Link to='/contacts'><img src={contact} alt='Contact Us' className='contactUs'/></Link>
                 <br/>
                 <br/>
                 <br/>

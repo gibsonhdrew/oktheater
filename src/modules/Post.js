@@ -90,10 +90,13 @@ class Post extends Component {
                     <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
                     <br/>
                 </div>
+                <br/>
                 <Link to={this.state.backToLink+'/'}>
                     <img src={back} alt='back' className='backButton'/>
                 </Link>
                 <br/>   
+                <br/>
+                <br/>
                 <br/>
             </div>
         )

@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Sahitya', serif;
+    font-family: 'Special Elite', serif;
+    font-weight: bold;
 }
 
 a {
@@ -122,6 +123,7 @@ p a {
 
 .postTitle {
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Special Elite', serif;
     line-height: 130%;
     color: #222222;
 }
@@ -188,6 +190,7 @@ iframe {
 
 /* ABOUT PAGE */
 .aboutBody {
+    font-weight: bold;
     width: 65%;
     min-width: 500px;
 }
@@ -221,6 +224,7 @@ iframe {
     width: 100%;
     opacity: 0.9;
     z-index: 10;
+    border: 3px solid #222222;
 }
 
 .contactUs {
