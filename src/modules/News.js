@@ -13,15 +13,24 @@ class Home extends Component {
     }
     componentDidMount() {
         var posts = []
+        var postsTh = []
         var slugs = []
+        var slugsTh = []
         var previousPosts = []
+        var previousPostsTh = []
         var previousSlugs = []
+        var previousSlugsTh = []
         let data = this.props.wpData
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 103) { // wp tag 'news'
                 posts.push(data[i].title.rendered)
                 posts.push(data[i].content.rendered)
                 slugs.push(data[i].slug)
+            }
+            if (data[i].tags[0] === 14694) { // wp tag 'theater'
+                postsTh.push(data[i].title.rendered)
+                postsTh.push(data[i].content.rendered)
+                slugsTh.push(data[i].slug)
             }
         }
         this.setState({ 
@@ -34,6 +43,14 @@ class Home extends Component {
             }
             for (let i=1;i<slugs.length;i++){
                 previousSlugs.push(slugs[i])
+            }
+        }
+        if (postsTh.length > 1) {
+            for (let i=2;i<postsTh.length;i+=2){
+                previousPostsTh.push(postsTh[i])
+            }
+            for (let i=1;i<slugs.length;i++){
+                previousSlugsTh.push(slugsTh[i])
             }
         }
         var thumbPosts = []
@@ -49,8 +66,19 @@ class Home extends Component {
         thumbImgUrls.push(imgArray4[imgArray4.length-1])
         let imgArray5 = posts[9].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
         thumbImgUrls.push(imgArray5[imgArray5.length-1])
+
+        var thumbImgUrlsTh = []
+        let imgArray2Th = postsTh[3].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrlsTh.push(imgArray2Th[imgArray2Th.length-1])
+        let imgArray3Th = postsTh[5].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrlsTh.push(imgArray3Th[imgArray3Th.length-1])
+        let imgArray4Th = postsTh[7].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrlsTh.push(imgArray4Th[imgArray4Th.length-1])
+        let imgArray5Th = postsTh[9].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrlsTh.push(imgArray5Th[imgArray5Th.length-1])
+ 
         for (let i=0;i<3;i++){
-            thumbPosts.push({post: previousPosts[i], slug: previousSlugs[i], img: thumbImgUrls[i]})
+            thumbPosts.push({post: previousPostsTh[i], slug: previousSlugsTh[i], img: thumbImgUrlsTh[i]})
         }
         for (let i=0;i<8;i++){
             newsPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
