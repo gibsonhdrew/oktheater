@@ -1,179 +1,118 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import news from '../images/news.png';
+import hr3 from '../images/hr3.png';
+import mailinglist from '../images/mailinglist.png';
+import oktwitter from '../images/oktwitter.png';
 
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    let newsTitles = []
-    let newsPosts = []
-    let newsUrls = []
-
-    let theaterTitles = []
-    let theaterPosts = []
-    let theaterUrls = []
-
-    let data = this.props.wpData
-    for (let i=0;i<data.length;i++) {
-      if (data[i].tags[0] === 103) { // wp tag 'news'
-        newsTitles.push(data[i].title.rendered)
-        newsPosts.push(data[i].content.rendered)
-        newsUrls.push(data[i].slug)
-      }
-      if (data[i].tags[0] === 14694) { // wp tag 'theater'
-        theaterTitles.push(data[i].title.rendered)
-        theaterPosts.push(data[i].content.rendered)
-        theaterUrls.push(data[i].slug)
-      }
-      theaterTitles.slice(0,3)
-      theaterPosts.slice(0,3)
-      theaterUrls.slice(0,3)
+    constructor(props) {
+        super(props);
+        this.state = {};
     }
-    this.setState({
-      theaterTitles: theaterTitles,
-      theaterPosts: theaterPosts,
-      theaterUrls: theaterUrls
-    }) 
-  }
-  render() {  
-    return (
-        <HomeDiv>
-          <ShowDisplay>
-            <ShowDisplayImg/>
-            <ShowDisplayNavs>
-              <ShowDisplayNavArrowBox>
-                <ShowDisplayNavArrow>
-                  &lsaquo;
-                </ShowDisplayNavArrow>
-              </ShowDisplayNavArrowBox>
-              <ShowDisplayNavArrowBox>
-                <ShowDisplayNavArrow>
-                  &rsaquo;
-                </ShowDisplayNavArrow>
-              </ShowDisplayNavArrowBox>
-            </ShowDisplayNavs>
-            <ShowDisplayText>
-              Life and Times - Episodes 4.5 & 5  
-            </ShowDisplayText>
-          </ShowDisplay>
-          <div style={{display:'inline-block',verticalAlign:'top'}}>
-            <img src={news} alt='news' style={{width: '70px',marginBottom:'12px'}}/>
-            <NewsHeadline>News Item 1</NewsHeadline>
-            <NewsHeadline>News Item 2</NewsHeadline>
-            <NewsHeadline>News Item 3</NewsHeadline>
-            <NewsHeadline>News Item 4</NewsHeadline>
-            <NewsHeadline>News Item 5</NewsHeadline>
-            <NewsHeadline>News Item 6</NewsHeadline>
-            <NewsHeadline>News Item 7</NewsHeadline>
-          </div>
-        </HomeDiv>
-    )
-  }
+    componentDidMount() {
+        var posts = []
+        var slugs = []
+        var previousPosts = []
+        var previousSlugs = []
+        let data = this.props.wpData
+        for (let i=0;i<data.length;i++) {
+            if (data[i].tags[0] === 103) { // wp tag 'news'
+                posts.push(data[i].title.rendered)
+                posts.push(data[i].content.rendered)
+                slugs.push(data[i].slug)
+            }
+        }
+        this.setState({ 
+            postCount: posts.length / 2,
+            postSlugs: slugs
+        })
+        if (posts.length > 1) {
+            for (let i=2;i<posts.length;i+=2){
+                previousPosts.push(posts[i])
+            }
+            for (let i=1;i<slugs.length;i++){
+                previousSlugs.push(slugs[i])
+            }
+        }
+        var thumbPosts = []
+        var newsPosts = []
+        var thumbImgUrls = []
+        let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        let imgUrl = imgArray[imgArray.length-1]
+        let imgArray2 = posts[3].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrls.push(imgArray2[imgArray2.length-1])
+        let imgArray3 = posts[5].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrls.push(imgArray3[imgArray3.length-1])
+        let imgArray4 = posts[7].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrls.push(imgArray4[imgArray4.length-1])
+        let imgArray5 = posts[9].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
+        thumbImgUrls.push(imgArray5[imgArray5.length-1])
+        for (let i=0;i<3;i++){
+            thumbPosts.push({post: previousPosts[i], slug: previousSlugs[i], img: thumbImgUrls[i]})
+        }
+        for (let i=0;i<8;i++){
+            newsPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
+        }
+        this.setState({ 
+            bodyPosts: posts, 
+            featuredImg: imgUrl,
+            thumbListObj: thumbPosts,
+            newsListObj: newsPosts
+        })
+        for (let i=0;i<8;i++) { posts.push('') } // buffer 
+    }
+    render() {  
+        if (!this.state.bodyPosts)
+           return null;
+
+        return (
+            <div className='homeBody fades'>
+
+                <div className='homeTop'>
+                    <div className='featuredBox'>
+                        <Link className='featuredHover' to={'/news/'+this.state.postSlugs[0]}>
+                            <img src={this.state.featuredImg} className='homeImg' alt='homeImage'/>
+                            <div className='featuredTitle'>
+                                <h3 dangerouslySetInnerHTML={{ __html: this.state.bodyPosts[0]}}/>
+                            </div>
+                        </Link>
+                        <div className='thumbDiv'>
+                            { 
+                                this.state.thumbListObj.map(function(slug, i){
+                                    return ( 
+                                        <Link className='thumb' key={i} to={'/news/'+slug.slug}>
+                                            <img key={i} src={slug.img} className='thumbImg' alt='thumbImage'/>
+                                            <div className='thumbTitle'>
+                                                <h3 key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
+                                            </div>
+                                        </Link>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className='newsBox'>
+                        <img src={news} className='newsTitle' alt='News:'/>
+                        <div>
+                            { 
+                                this.state.newsListObj.map(function(slug, i){
+                                    return ( 
+                                        <Link key={i} to={'/news/'+slug.slug}>
+                                            <p key={i} dangerouslySetInnerHTML={{ __html: slug.post}}/>
+                                        </Link> 
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <br/><br/>
+            </div>
+        )
+    }
 }
-
-const HomeDiv = (props) => (
-  <div className='fades' style={{
-    paddingTop: '25px',
-    height: '600px',
-    width: '94vw'
-  }} {...props} />
-)
-
-const ShowDisplay = (props) => (
-  <div className='homeShowDisplay' style={{
-    position: 'relative',
-    display: 'inline-block',
-    border: '3px solid #333333',
-    backgroundColor: '#EDEDED',
-    boxSizing: 'border-box',
-    marginRight: '32px',
-    width: '65vw',
-    boxShadow: '2px 2px 2px #EDEDED',
-    height: 'calc(65vw * .5)'
-  }} {...props} />
-)
-
-const ShowDisplayImg = (props) => (
-  <img className='imgCover' 
-    src='https://oktheatersite.files.wordpress.com/2017/11/birds.jpg' 
-    alt='displayImg'
-    style={{
-      position: 'absolute',
-      height: '100%',
-      width: '100%'
-    }} {...props} />
-)
-
-const ShowDisplayText = (props) => (
-  <div style={{
-    position: 'absolute',
-    fontSize:'20px',
-    fontWeight:'bold',
-    color: 'white',
-    backgroundColor: '#222222',
-    opacity: '0.8',
-    paddingLeft: '12px',
-    width: 'calc(100% - 12px)',
-    height: '34px',
-    bottom: '0',
-    paddingTop: '6px',
-    marginBottom: '-1px'
-  }} {...props} />
-)
-
-const ShowDisplayNavs = (props) => (
-  <div style={{
-    position: 'absolute',
-    display: 'flex',
-    justifyContent: 'space-between',
-    top: 'calc(65vw * 0.19)',
-    paddingLeft: '12px',
-    paddingRight: '12px',
-    height: '70px',
-    width: 'calc(100% - 24px)'
-  }} {...props} />
-)
-
-const ShowDisplayNavArrowBox = (props) => (
-  <div className='hoverVisible' style={{
-    borderRadius: '10px',
-    opacity: '0.8',
-    backgroundColor: '#222222',
-    height: '70px',
-    width: '70px',
-  }} {...props} />
-)
-
-const ShowDisplayNavArrow = (props) => (
-  <span class='showDisplayNavArrow' style={{
-    position: 'absolute',
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: '52px',
-    top: '-10px',
-    paddingLeft: '25px'
-  }} {...props} />
-)
-
-const NewsHeadline = (props) => (
-  <div style={{
-    width: '25vw',
-    fontSize: '20px',
-    marginLeft:'-14px',
-    fontWeight: 'bold',
-    marginBottom:'12px',
-    paddingLeft: '12px',
-    backgroundColor: 'white',
-    color: '#333333',
-    boxShadow: '2px 2px 2px #EDEDED'
-  }} {...props} />
-)
-
-
-
 
 export default Home;
