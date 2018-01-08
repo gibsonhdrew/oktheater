@@ -94,9 +94,8 @@ class Okvideo extends Component {
         } else {
           hrImg4 = { opacity: 1, width:'50em' } 
           prevText = { 
-            opacity: 1, 
-            height:'2.2em',
-            width:'10em'
+            opacity: '1', 
+	    width: '130px' 
           } 
         }
         if (!this.state.currentPosts)

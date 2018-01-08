@@ -32,15 +32,16 @@ p a {
 }
 
 .gridMap {
-  width: 18em;
-  height: 17em;
+  width: 310px;
+  height: 260px;
   box-shadow: 3px 3px 3px #EDEDED;
+  box-sizing: border-box;
   border: 3px solid #444444;
 }
 
 .gridMapVideo {
-  width: 400px;
-  height: 280px;
+  width: 310px;
+  height: 210px;
   border: 3px solid #444444;
   box-sizing: border-box;
   box-shadow: 3px 3px 3px #EDEDED;
@@ -154,7 +155,7 @@ p a {
 
 .previousLink {
     font-weight: bold;
-    font-size: 27px;
+    font-size: 20px;
     line-height: 130%;
     color: #333333;
 }
@@ -253,7 +254,7 @@ iframe {
 
 /* HOME PAGE */
 .homeBody {
-    height: 950px;
+    height: 930px;
 }
 
 .homeTop {
@@ -290,8 +291,8 @@ iframe {
 
 .newsBox p {
     color: #444444;
-    max-width: 88%;
-    font-size: 20px;
+    max-width: 94%;
+    font-size: 18px;
     font-weight: bold;
     line-height: 140%;
 }
@@ -304,16 +305,18 @@ iframe {
     margin-top: 36px;
     margin-left: -3px;
     margin-right: -2px;
+    box-sizing: border-box;
 }
 
 .thumbDiv .thumb {
     opacity:0.9;
     z-index:50;
     width:32%;
-    height:330px;
+    height:300px;
     background-color: #FFFFFF;
     box-shadow: 5px 5px 5px #F7F7F7;
     border: 3px solid #333333;
+    box-sizing: border-box;
 }
 
 .thumbDiv .thumb:hover {
