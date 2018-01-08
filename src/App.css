@@ -56,6 +56,10 @@ p a {
   opacity: 0.8;
 }
 
+.mailinglist {
+  opacity: 0.9;
+}
+
 .pageTitle {
     opacity: 0.93;
     margin-top: 20px;

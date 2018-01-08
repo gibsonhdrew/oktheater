@@ -17,8 +17,10 @@ import oktheater from './images/navbar/oktheater.png';
 import okvideo from './images/navbar/okvideo.png';
 import okradio from './images/navbar/okradio.png';
 import okbooks from './images/navbar/okbooks.png';
-import mailinglist from './images/mailinglist.png';
-import oktwitter from './images/oktwitter.png';
+import mailinglist from './images/footer/mailinglist.png';
+import facebook from './images/footer/facebook.png';
+import contact from './images/footer/contact.png';
+import twitter from './images/footer/twitter.png';
 
 class App extends Component {
     constructor(props) {
@@ -169,15 +171,18 @@ const Footer = (props) => (
     paddingLeft: '50px',
     backgroundColor:'#222222'
   }} {...props}>
-    <a href='http://eepurl.com/tEQzX'><FooterLink src={mailinglist}/></a>
-    <a href='https://twitter.com/oktheater'><FooterLink src={oktwitter}/></a>
+    <a href='http://eepurl.com/tEQzX'><FooterLink className='mailinglist' src={mailinglist}/></a>
+    <a href='https://www.facebook.com/oktheater/'><FooterLink src={facebook}/></a>
+    <a href='https://twitter.com/oktheater'><FooterLink src={twitter}/></a>
+    <a href='mailto:kelly@oktheater.org'><FooterLink src={contact}/></a>
   </div>
 )
 
 const FooterLink = (props) => (
   <img style={{
-    width: '200px',
-    marginRight:'25px',
+    height: '20px',
+    marginTop: '5px',
+    marginRight:'30px',
     filter: 'invert(100%)'
   }} alt='footerLink' {...props}/>
 ) 
