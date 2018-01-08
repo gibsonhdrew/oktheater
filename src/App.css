@@ -254,7 +254,7 @@ iframe {
 
 /* HOME PAGE */
 .homeBody {
-    height: 930px;
+    height: 890px;
 }
 
 .homeTop {
@@ -267,6 +267,7 @@ iframe {
 .featuredBox {
     border: 3px solid #222222;
     width: 60%;
+    height: 470px;
 }
 
 .featuredBox img {
@@ -294,7 +295,7 @@ iframe {
     max-width: 94%;
     font-size: 18px;
     font-weight: bold;
-    line-height: 140%;
+    line-height: 130%;
 }
 
 .thumbDiv {
