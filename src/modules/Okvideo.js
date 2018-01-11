@@ -22,7 +22,7 @@ class Okvideo extends Component {
         let vidImages = []
         let dispPosts = []
         let prevPosts = []
-        let vimeoVidSwaps = []
+        let vimeoResponseVids = []
         let self = this;
         let vimeoImgIndex = 0
         for (let i=0;i<data.length;i++) {
@@ -40,25 +40,24 @@ class Okvideo extends Component {
                   let vimeoID = vimeoLink.substring(vimeoLink.indexOf('video/')+6)
                   let vimeoImg = '' 
                   vidImages.push(vimeoImg)
-
+                  vimeoImgIndex +=1
                   axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
                     .then(function(response) {
-                      vimeoImgIndex +=1
-                      vimeoVidSwaps.push({index: vimeoImgIndex, image: response.data[0].thumbnail_large})
-                      for (let j=0;j<dispPosts.length;j++) {
-                        if (dispPosts[j].img==='') {
-                          if (vimeoVidSwaps[0]) {
-                            dispPosts[j].img = vimeoVidSwaps[0].image
-                            vimeoVidSwaps.shift()
+                      vimeoResponseVids.push({index: vimeoImgIndex, image: response.data[0].thumbnail_large})
+                      if (response.data[0].id == vimeoID) {
+                        for (let j=0;j<dispPosts.length;j++) {
+                          if (dispPosts[j].img==='') {
+                            if (vimeoResponseVids[0]) {
+                              dispPosts[j].img = vimeoResponseVids[0].image
+                              vimeoResponseVids.shift()
+                            }
                           }
+                          self.setState({ 
+                              currentPosts: dispPosts 
+                          })
                         }
-                        self.setState({ 
-                            currentPosts: dispPosts 
-                        })
                       }
                     })
-
-                  console.log(vimeoVidSwaps)
                   postThumbnails.push(vimeoLink)
                 }
                 postTitles.push(data[i].title.rendered)

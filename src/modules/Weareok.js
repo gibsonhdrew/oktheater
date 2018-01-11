@@ -23,11 +23,11 @@ class Weareok extends Component {
                 </div>
                 <div className='pressQuote villagevoice'>
                  <p>&quot;Nature Theater of Oklahoma stands at the frontier...&quot;</p> 
-                 <p style={{marginLeft: '50%'}}>-The Village VOICE</p> 
+                 <p style={{marginLeft: '40%'}}>-The Village VOICE</p> 
                 </div>
                 <div className='pressQuote nyt'>
                  <p>&quot;One of the most innovative theater companies in New York... Nature Theater seeks to unearth something that approaches beauty, or at least a fresh, strange kind of entertainment.&quot;</p> 
-                 <p style={{marginLeft: '50%'}}>-The New York Times</p> 
+                 <p style={{marginLeft: '40%'}}>-The New York Times</p> 
                 </div>
                 <div className='pressQuote villagevoice'>
                  <p>&quot;Sprawling, bizarre, trivial, profound, holy, idiotic and quite resistant to criticism... as messy and capacious as life itself.&quot;</p> 
