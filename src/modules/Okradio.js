@@ -48,10 +48,10 @@ class Okradio extends Component {
         })
     }
     render() {  
-        if (this.state.postCount <= 4) { var hrImg4 = { opacity: 0 } }
-        if (this.state.postCount <= 3) { var hrImg3 = { opacity: 0 } }
-        if (this.state.postCount <= 2) { var hrImg2 = { opacity: 0 } }
-        if (this.state.postCount <= 1) { var hrImg1 = { opacity: 0 } }
+        if (this.state.postCount <= 4) { var hrImg4 = { display: 'none' } }
+        if (this.state.postCount <= 3) { var hrImg3 = { display: 'none' } }
+        if (this.state.postCount <= 2) { var hrImg2 = { display: 'none' } }
+        if (this.state.postCount <= 1) { var hrImg1 = { display: 'none' } }
         if (!this.state.bodyPosts)
            return null;
 
