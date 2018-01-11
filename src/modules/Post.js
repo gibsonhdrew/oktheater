@@ -38,9 +38,7 @@ class Post extends Component {
         })
         for (let i=0;i<data.length;i++){
             if (data[i].slug === keyword) {
-                console.log(data[i].date)
                 let year = data[i].date.substring(0,4)
-                console.log('year: '+year)
                 let month = data[i].date.substring(5,7).replace(/^0+/, '')
                 if (month === '1') {
                     month = 'January'
@@ -67,9 +65,7 @@ class Post extends Component {
                 } else if (month === '12') {
                     month = 'December'
                 }
-                console.log('month: '+month)
                 let day = data[i].date.substring(8,10).replace(/^0+/, '')
-                console.log('day: '+day)
                 this.setState({
                     postTitle : data[i].title.rendered,
                     postText : data[i].content.rendered,
