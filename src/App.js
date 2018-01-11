@@ -167,7 +167,6 @@ const Footer = (props) => (
   <div className='footer' style={{
     width:'100vw',
     paddingTop:'15px',
-    paddingLeft: '50px',
     backgroundColor:'#222222'
   }} {...props}>
     <a href='http://eepurl.com/tEQzX'><FooterLink className='mailinglist' src={mailinglist}/></a>

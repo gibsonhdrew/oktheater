@@ -453,6 +453,7 @@ iframe {
 
 .footer {
   height: 50px;
+  padding-left: 50px;
 }
 
 /* MOBILE LAYOUT */
@@ -542,6 +543,7 @@ iframe {
     width: 102px;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 16px;
   }
 
   .footer a {
