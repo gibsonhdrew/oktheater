@@ -164,9 +164,8 @@ class ScrollToTop extends Component {
 }
 
 const Footer = (props) => (
-  <div style={{
+  <div className='footer' style={{
     width:'100vw',
-    height:'50px',
     paddingTop:'15px',
     paddingLeft: '50px',
     backgroundColor:'#222222'
