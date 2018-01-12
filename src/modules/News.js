@@ -58,14 +58,6 @@ class Home extends Component {
         var thumbImgUrls = []
         let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
         let imgUrl = imgArray[imgArray.length-1]
-        let imgArray2 = posts[3].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrls.push(imgArray2[imgArray2.length-1])
-        let imgArray3 = posts[5].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrls.push(imgArray3[imgArray3.length-1])
-        let imgArray4 = posts[7].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrls.push(imgArray4[imgArray4.length-1])
-        let imgArray5 = posts[9].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrls.push(imgArray5[imgArray5.length-1])
 
         var thumbImgUrlsTh = []
         let imgArray1Th = postsTh[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
