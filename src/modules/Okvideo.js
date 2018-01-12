@@ -52,6 +52,7 @@ class Okvideo extends Component {
                             if (vimeoResponseVids[0]) {
                               dispPosts[j].img = vimeoResponseVids[0].image
                               vimeoResponseVids.shift()
+                              vimeoIdOrder.shift();
                             }
                           }
                           self.setState({ 
@@ -59,7 +60,6 @@ class Okvideo extends Component {
                               numberOfPosts: dispPosts.length
                           })
                         }
-                        vimeoIdOrder.shift();
                       }
                     })
                   postThumbnails.push(vimeoLink)
@@ -91,7 +91,7 @@ class Okvideo extends Component {
         })
     }
     render() {  
-        if (this.state.numberOfPosts < 9) { 
+        if (this.state.numberOfPosts < 10) { 
           var hrImg4 = { opacity: '0' } 
           var prevText = { opacity: '0' } 
         } else {
