@@ -91,7 +91,6 @@ class Okvideo extends Component {
         })
     }
     render() {  
-        console.log(this.state.numberOfPosts)
         if (this.state.numberOfPosts < 9) { 
           var hrImg4 = { opacity: '0' } 
           var prevText = { opacity: '0' } 
