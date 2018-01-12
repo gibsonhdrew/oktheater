@@ -45,21 +45,26 @@ class Okvideo extends Component {
                   vimeoIdOrder.push(vimeoID)
                   axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
                     .then(function(response) {
-                      vimeoResponseVids.push({index: vimeoImgIndex, image: response.data[0].thumbnail_large})
-                      if (response.data[0].id == vimeoIdOrder[0]) {
-                        for (let j=0;j<dispPosts.length;j++) {
-                          if (dispPosts[j].img==='') {
-                            if (vimeoResponseVids[0]) {
-                              dispPosts[j].img = vimeoResponseVids[0].image
-                              vimeoResponseVids.shift()
-                              vimeoIdOrder.shift();
+                      //array of ajax responses
+                      vimeoResponseVids.push({id: vimeoID, index: vimeoImgIndex, image: response.data[0].thumbnail_large})
+
+                      for (var t=0;t<vimeoResponseVids.length;t++) {
+                        // check if ajax response corresponds to data ID order. if yes:
+                        if (response.data[0].id == vimeoIdOrder[t]) {
+                          for (let j=0;j<dispPosts.length;j++) {
+                            if (dispPosts[j].img==='') {
+                              if (vimeoResponseVids[0]) {
+                                dispPosts[j].img = vimeoResponseVids[0].image
+                                vimeoResponseVids.shift()
+                                vimeoIdOrder.shift();
+                                self.setState({ 
+                                    currentPosts: dispPosts,
+                                    numberOfPosts: dispPosts.length
+                                })
+                              }
                             }
                           }
-                          self.setState({ 
-                              currentPosts: dispPosts,
-                              numberOfPosts: dispPosts.length
-                          })
-                        }
+                        } else console.log('spaghetti')
                       }
                     })
                   postThumbnails.push(vimeoLink)
