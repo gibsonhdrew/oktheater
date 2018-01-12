@@ -22,6 +22,7 @@ class Okvideo extends Component {
         let vidImages = []
         let dispPosts = []
         let prevPosts = []
+        let vimeoIdOrder = []
         let vimeoResponseVids = []
         let self = this;
         let vimeoImgIndex = 0
@@ -41,10 +42,11 @@ class Okvideo extends Component {
                   let vimeoImg = '' 
                   vidImages.push(vimeoImg)
                   vimeoImgIndex +=1
+                  vimeoIdOrder.push(vimeoID)
                   axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
                     .then(function(response) {
                       vimeoResponseVids.push({index: vimeoImgIndex, image: response.data[0].thumbnail_large})
-                      if (response.data[0].id == vimeoID) {
+                      if (response.data[0].id == vimeoIdOrder[0]) {
                         for (let j=0;j<dispPosts.length;j++) {
                           if (dispPosts[j].img==='') {
                             if (vimeoResponseVids[0]) {
@@ -57,6 +59,7 @@ class Okvideo extends Component {
                               numberOfPosts: dispPosts.length
                           })
                         }
+                        vimeoIdOrder.shift();
                       }
                     })
                   postThumbnails.push(vimeoLink)
