@@ -53,7 +53,8 @@ class Okvideo extends Component {
                             }
                           }
                           self.setState({ 
-                              currentPosts: dispPosts 
+                              currentPosts: dispPosts,
+                              numberOfPosts: dispPosts.length
                           })
                         }
                       }
@@ -87,14 +88,14 @@ class Okvideo extends Component {
         })
     }
     render() {  
-        if (this.state.postCount < 9) { 
-          var hrImg4 = { opacity: 0 } 
-          var prevText = { opacity: 0 } 
+        if (this.state.numberOfPosts < 10) { 
+          var hrImg4 = { display: 'none' } 
+          var prevText = { display: 'none' } 
         } else {
           hrImg4 = { opacity: 1, width:'50em' } 
           prevText = { 
             opacity: '1', 
-	    width: '130px' 
+            width: '130px' 
           } 
         }
         if (!this.state.currentPosts)
