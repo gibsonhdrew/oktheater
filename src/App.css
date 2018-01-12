@@ -223,6 +223,7 @@ iframe {
     font-weight: bold;
     width: 65%;
     min-width: 500px;
+    box-sizing: border-box;
 }
 
 .pressQuote {
@@ -556,8 +557,8 @@ iframe {
 
   .footer {
     height: 200px;
-    width: 102px;
     display: flex;
+    max-width: calc(100% - 16px);
     flex-wrap: wrap;
     padding-left: 16px;
   }
@@ -732,6 +733,7 @@ iframe {
         margin-left: -15px;
         opacity: 0.9;
         z-index: 10;
+        box-sizing: border-box;
     }
 
     .contactUs {
