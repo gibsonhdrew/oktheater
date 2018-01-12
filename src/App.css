@@ -460,10 +460,8 @@ iframe {
 
 .footer {
   height: 50px;
-}
-
-.footer a {
-  margin-left: 50px;
+  padding-left: 50px;
+  max-width: calc(100% - 50px);
 }
 
 /* MOBILE LAYOUT */
