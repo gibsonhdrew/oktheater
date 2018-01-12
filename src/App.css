@@ -144,6 +144,9 @@ p a {
     cursor: pointer;
 }
 
+.app {
+}
+
 .postTitle {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Special Elite', serif;
@@ -167,7 +170,11 @@ p a {
 
 /* CONTAINER FOR PAGE COMPONENTS */
 .mainBody {
-    max-width: 100vw;
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 20px;
     display: block;
     background-color: #FCFCFC;
@@ -453,7 +460,10 @@ iframe {
 
 .footer {
   height: 50px;
-  padding-left: 50px;
+}
+
+.footer a {
+  margin-left: 50px;
 }
 
 /* MOBILE LAYOUT */
