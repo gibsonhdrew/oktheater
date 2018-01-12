@@ -92,8 +92,8 @@ class Okvideo extends Component {
     }
     render() {  
         if (this.state.numberOfPosts < 10) { 
-          var hrImg4 = { display: 'none' } 
-          var prevText = { display: 'none' } 
+          var hrImg4 = { opacity: 0 } 
+          var prevText = { opacity: 0 } 
         } else {
           hrImg4 = { opacity: 1, width:'50em' } 
           prevText = { 
