@@ -46,10 +46,10 @@ class Home extends Component {
             }
         }
         if (postsTh.length > 1) {
-            for (let i=2;i<postsTh.length;i+=2){
+            for (let i=0;i<postsTh.length;i+=2){
                 previousPostsTh.push(postsTh[i])
             }
-            for (let i=1;i<slugs.length;i++){
+            for (let i=0;i<slugsTh.length;i++){
                 previousSlugsTh.push(slugsTh[i])
             }
         }
