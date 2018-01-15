@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import okvideo from '../images/pagetitles/okvideo.png';
-import hr2 from '../images/hr2.png';
 import previous from '../images/previous.png';
 
 
@@ -25,7 +24,6 @@ class Okvideo extends Component {
         let vimeoIdOrder = []
         let vimeoResponseVids = []
         let self = this;
-        let vimeoImgIndex = 0
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 412) { // wp tag 'video'
                 if (data[i].content.rendered.match('https://www.youtube.com')) {
@@ -41,30 +39,37 @@ class Okvideo extends Component {
                   let vimeoID = vimeoLink.substring(vimeoLink.indexOf('video/')+6)
                   let vimeoImg = '' 
                   vidImages.push(vimeoImg)
-                  vimeoImgIndex +=1
-                  vimeoIdOrder.push(vimeoID)
+                  vimeoIdOrder.push({
+                    id: vimeoID, 
+                    img: ''   
+                  })
+
                   axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
                     .then(function(response) {
-                      //array of ajax responses
-                      vimeoResponseVids.push({id: vimeoID, index: vimeoImgIndex, image: response.data[0].thumbnail_large})
-
-                      for (var t=0;t<vimeoResponseVids.length;t++) {
-                        // check if ajax response corresponds to data ID order. if yes:
-                        if (response.data[0].id == vimeoIdOrder[t]) {
-                          for (let j=0;j<dispPosts.length;j++) {
-                            if (dispPosts[j].img==='') {
-                              if (vimeoResponseVids[0]) {
-                                dispPosts[j].img = vimeoResponseVids[0].image
-                                vimeoResponseVids.shift()
-                                vimeoIdOrder.shift();
-                                self.setState({ 
-                                    currentPosts: dispPosts,
-                                    numberOfPosts: dispPosts.length
-                                })
+                      vimeoResponseVids.push({
+                        id: vimeoID, 
+                        img: response.data[0].thumbnail_large
+                      })
+                      for (let b=0;b<vimeoIdOrder.length;b++) {
+                        if (vimeoIdOrder[b].img === '') {
+                          for (let u=0;u<vimeoResponseVids.length;u++) {
+                            if (vimeoResponseVids[u].id === vimeoIdOrder[b].id) {
+                              vimeoIdOrder[b].img = vimeoResponseVids[u].img
+                              for (let j=0;j<dispPosts.length;j++) {
+                                if (dispPosts[j].img === '') {
+                                  if (vimeoIdOrder[0].img !== '') {
+                                    dispPosts[j].img = vimeoIdOrder[0].img
+                                    vimeoIdOrder.shift()
+                                    self.setState({
+                                      currentPosts: dispPosts,
+                                      numberOfPosts: dispPosts.length
+                                    })
+                                  }
+                                }
                               }
                             }
                           }
-                        } else console.log('spaghetti')
+                        }
                       }
                     })
                   postThumbnails.push(vimeoLink)
@@ -97,10 +102,8 @@ class Okvideo extends Component {
     }
     render() {  
         if (this.state.numberOfPosts < 10) { 
-          var hrImg4 = { display: 'none' } 
           var prevText = { display: 'none' } 
         } else {
-          hrImg4 = { display: 'block', width:'50em' } 
           prevText = { 
             display: 'block', 
             width: '130px' 

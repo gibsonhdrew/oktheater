@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import kafka from '../images/kafka.png'
 
 
 class Splash extends Component {

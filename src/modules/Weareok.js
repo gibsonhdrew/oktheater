@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import about from '../images/about.jpg';
 import wereok from '../images/pagetitles/wereok.png';
-import contact from '../images/pagetitles/contactus.png';
-import villagevoice from '../images/blurbs/villagevoice.png';
 import hr2 from '../images/hr2.png';
 import hr3 from '../images/hr3.png';
-import nyt from '../images/blurbs/nyt.png';
 
 class Weareok extends Component {
     render() {  

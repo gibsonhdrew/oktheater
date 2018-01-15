@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import news from '../images/news.png';
-import hr3 from '../images/hr3.png';
-import mailinglist from '../images/mailinglist.png';
-import oktwitter from '../images/oktwitter.png';
 
 
 class Home extends Component {
@@ -55,7 +52,6 @@ class Home extends Component {
         }
         var thumbPosts = []
         var newsPosts = []
-        var thumbImgUrls = []
         let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
         let imgUrl = imgArray[imgArray.length-1]
 
