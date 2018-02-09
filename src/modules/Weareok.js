@@ -16,6 +16,7 @@ class Weareok extends Component {
                 <br/><br/>
                 <div className='imgShuffle'>
                   <img src={weareok1} alt='about' className='aboutPic'/>
+                  <p style={{fontSize: '10px', marginBottom:'20px'}}>Photo credit: Ditz Fejer</p>
                 </div>
                 <p>Nature Theater of Oklahoma is an award-winning New York art and performance enterprise under the direction of Pavol Liska and Kelly Copper.  With each new project, we attempt to set an impossible challenge for ourselves, the audience, and our collaborators -- working from inside the codes and confines of established genres and exploding them. No two projects are formally the same, but the work is always full of humor, earnestness, rigor, and the audience plays an essential role -- whether as spectators or - just as often - as participants in the work.</p>
                 <p>Using readymade material, found space, gifted properties, cosmic accident, extreme formal manipulation and plain hard work -- Nature Theater of Oklahoma makes art to affect a shift in the perception of everyday reality that extends beyond the site of performance and into the world in which we live.</p>
