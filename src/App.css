@@ -257,7 +257,6 @@ iframe {
 
 .aboutPic {
     width: 100%;
-    height: 600px;
     opacity: 0.85;
     z-index: 10;
     border: 3px solid #171717;
@@ -467,6 +466,67 @@ iframe {
   height: 50px;
   padding-left: 50px;
   max-width: calc(100% - 50px);
+}
+
+/* WEAREOK SLIDER */
+.slider {
+  position: relative;
+  height: 510px;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+}
+
+.slide1 img, .slide2 img, .slide3 img, .slide4 img {
+  height: 470px;
+}
+.slide1 {
+    animation:fade 26s infinite;
+    -webkit-animation:fade 26s infinite;
+} 
+.slide2 {
+    animation:fade2 26s infinite;
+    -webkit-animation:fade2 26s infinite;
+}
+.slide3 {
+    animation:fade3 26s infinite;
+    -webkit-animation:fade3 26s infinite;
+}
+.slide4 {
+    animation:fade4 26s infinite;
+    -webkit-animation:fade4 26s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  25% { opacity: 0}
+  50% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  25% { opacity: 1}
+  50% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  25% { opacity: 0}
+  50% { opacity: 1 }
+  75% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade4
+{
+  0%   {opacity:0}
+  25% { opacity: 0}
+  50% { opacity: 0 }
+  75% { opacity: 1 }
+  100% { opacity: 0}
 }
 
 /* MOBILE LAYOUT */
