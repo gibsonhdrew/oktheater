@@ -471,14 +471,16 @@ iframe {
 /* WEAREOK SLIDER */
 .slider {
   position: relative;
-  height: 510px;
+  height: 530px;
+  width: 100%;
 }
 .slide1,.slide2,.slide3,.slide4,.slide5 {
   position: absolute;
+  width: 100%;
 }
 
 .slide1 img, .slide2 img, .slide3 img, .slide4 img {
-  height: 470px;
+  height: 490px;
 }
 .slide1 {
     animation:fade 26s infinite;
