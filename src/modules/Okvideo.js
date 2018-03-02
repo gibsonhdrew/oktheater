@@ -43,12 +43,15 @@ class Okvideo extends Component {
                     id: vimeoID, 
                     img: ''   
                   })
-
-                  axios.get('http://vimeo.com/api/v2/video/'+vimeoID+'.json')
+                  axios.get('https://api.vimeo.com/videos/'+vimeoID, 
+                    { headers: {
+                      "Authorization": "Bearer 85f1765d285f41dc5043d4a114384d8c"
+                      }
+                    })
                     .then(function(response) {
                       vimeoResponseVids.push({
                         id: vimeoID, 
-                        img: response.data[0].thumbnail_large
+                        img: response.data.pictures.sizes[3].link
                       })
                       for (let b=0;b<vimeoIdOrder.length;b++) {
                         if (vimeoIdOrder[b].img === '') {
@@ -99,6 +102,9 @@ class Okvideo extends Component {
             currentPosts: dispPosts, 
             previousPostObj: prevPosts
         })
+        setTimeout(function(){ 
+          console.log("Hello"); 
+        }, 3000);
     }
     render() {  
         if (this.state.numberOfPosts < 10) { 
