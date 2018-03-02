@@ -43,12 +43,13 @@ class Okvideo extends Component {
                     id: vimeoID, 
                     img: ''   
                   })
-                  axios.get('https://api.vimeo.com/videos/'+vimeoID, 
+                  axios.get('https://api.vimeo.com/videos/'+vimeoID+'?fields=pictures.sizes', 
                     { headers: {
                       "Authorization": "Bearer 85f1765d285f41dc5043d4a114384d8c"
                       }
                     })
                     .then(function(response) {
+                      console.log(response)
                       vimeoResponseVids.push({
                         id: vimeoID, 
                         img: response.data.pictures.sizes[3].link
