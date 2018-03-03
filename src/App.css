@@ -52,6 +52,23 @@ p a {
   box-shadow: 3px 3px 3px #EDEDED;
 }
 
+.tiled-gallery {
+  width: 100%;
+}
+
+.gallery-row {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+}
+
+.tiled-gallery-item, .tiled-gallery-item-large {
+  margin: 4px;
+}
+
+.galleryFilter {
+}
+
 .gridMap p, .gridMapVideo p {
   margin-top: 5px;
   padding-left: 4px;

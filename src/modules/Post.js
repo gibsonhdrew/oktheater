@@ -66,9 +66,13 @@ class Post extends Component {
                     month = 'December'
                 }
                 let day = data[i].date.substring(8,10).replace(/^0+/, '')
+
+                let filteredText = data[i].content.rendered;
+                console.log(filteredText)
+
                 this.setState({
                     postTitle : data[i].title.rendered,
-                    postText : data[i].content.rendered,
+                    postText : filteredText,
                     postDate : month+' '+day+', '+year
                 })
             }
