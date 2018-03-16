@@ -17,7 +17,7 @@ a:hover {
 p {
     font-size: 16px;
     line-height: 160%;
-}   
+}
 
 p a {
     text-decoration: underline;
@@ -573,7 +573,47 @@ iframe {
     .tiled-gallery {
       margin-top: 30px;
       margin-bottom: 30px;
-      display: none;
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+      height: 1160px;
+      margin-left: -6px;
+    }
+
+    .tiled-gallery img, .gallery-row img, .gallery-group img, .tiled-gallery-item img, .tiled-gallery-item-large img {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 220px;
+        max-height: 220px;
+        min-height: 220px;
+        display: block;
+    }
+    .gallery-row {
+        display: block;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 220px;
+        max-height: 220px;
+        padding-bottom: 10px;
+    }
+
+    .gallery-group, images-1 {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 220px;
+        max-height: 220px;
+        padding-bottom: 10px;
+    }
+
+    .tiled-gallery-item {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 10px;
     }
 
     .gridMap {

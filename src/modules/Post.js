@@ -70,7 +70,10 @@ class Post extends Component {
                 let postHtml = data[i].content.rendered;
                 // get post html as big chunk of text
               
-                // 
+                // first step: remove all <a> tags and hrefs
+              
+                // second: match all instances of data-medium-file="whateverItIs.jpg" 
+                // and put the urls into an array
               
                 // 
               
@@ -87,9 +90,9 @@ class Post extends Component {
                 })
             }
         }
-    }   
+    }
 
-    render() {  
+    render() {
         return (
             <div className='oktBody fades'>
                 <div className='pageBody'>
@@ -104,7 +107,7 @@ class Post extends Component {
                 <Link to={this.state.backToLink+'/'}>
                     <img src={back} alt='back' className='backButton'/>
                 </Link>
-                <br/>   
+                <br/>
                 <br/>
                 <br/>
                 <br/>
