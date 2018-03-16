@@ -68,20 +68,6 @@ class Post extends Component {
                 let day = data[i].date.substring(8,10).replace(/^0+/, '')
 
                 let postHtml = data[i].content.rendered;
-                // get post html as big chunk of text
-              
-                // first step: remove all <a> tags and hrefs
-              
-                // second: match all instances of data-medium-file="whateverItIs.jpg" 
-                // and put the urls into an array
-              
-                // 
-              
-                // 
-              
-                // get post html as big chunk of text
-              
-                
 
                 this.setState({
                     postTitle : data[i].title.rendered,
