@@ -589,6 +589,7 @@ iframe {
         max-height: 220px;
         min-height: 220px;
         display: block;
+        opacity: 1;
     }
     .gallery-row {
         display: block;

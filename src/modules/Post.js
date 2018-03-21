@@ -67,7 +67,34 @@ class Post extends Component {
                 }
                 let day = data[i].date.substring(8,10).replace(/^0+/, '')
 
-                let postHtml = data[i].content.rendered;
+                var wpBlogLinks = [];
+                wpBlogLinks.push(data[i].content.rendered.match(/href=(.*?) /g));
+                for (let string of wpBlogLinks[0]) {
+                    wpBlogLinks.push(string.replace('href="','').replace('"','').replace(' ', '')) 
+                }
+                wpBlogLinks.shift()
+
+                var newImgLinks = [];
+                newImgLinks.push(data[i].content.rendered.match(/data-orig-file=(.*?) /g));
+                for (let string of newImgLinks[0]) {
+                    newImgLinks.push(string.replace('data-orig-file="','').replace('"','').replace(' ', '')) 
+                }
+                newImgLinks.shift()
+                for (let string of newImgLinks) {
+                    if (string.match(/w=/g)) {
+                        newImgLinks.shift()
+                    }
+                }
+
+                let postHtml = data[i].content.rendered
+                    .replace(/w=163&h=219/g, 'w=704&h=523')
+                    .replace(/w=225&h=303/g, 'w=704&h=523')
+                    .replace(/w=186&h=250/g, 'w=285&h=384') 
+                    .replace(/w=185&h=250/g, 'w=285&h=384') 
+
+                for (let w=0;w<wpBlogLinks.length;w++) {
+                    postHtml = postHtml.replace(wpBlogLinks[w], newImgLinks[w])
+                }
 
                 this.setState({
                     postTitle : data[i].title.rendered,
