@@ -16,7 +16,7 @@ class Post extends Component {
             .replace('/okradio/','')
             .replace('/okbooks/','')
             .replace('/news/','')
-        //refactor the following when you get the chance
+
         if (this.props.location.pathname.includes('/oktheater/')) {
             backTo = '/oktheater'
         }
@@ -36,6 +36,7 @@ class Post extends Component {
             route: keyword,
             backToLink: backTo
         })
+
         for (let i=0;i<data.length;i++){
             if (data[i].slug === keyword) {
                 let year = data[i].date.substring(0,4)
@@ -105,7 +106,7 @@ class Post extends Component {
         }
     }
 
-    render() {
+render() {
         return (
             <div className='oktBody fades'>
                 <div className='pageBody'>
