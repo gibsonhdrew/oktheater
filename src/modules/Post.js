@@ -71,11 +71,14 @@ class Post extends Component {
                 var wpBlogLinks = [];
                 wpBlogLinks.push(data[i].content.rendered.match(/href=(.*?) /g));
                 if (wpBlogLinks[0]) {
-                  for (let string of wpBlogLinks[0]) {
-                      wpBlogLinks.push(string.replace('href="','').replace('"','').replace(' ', '')) 
-                  }
-                  wpBlogLinks.shift()
+                    for (let string of wpBlogLinks[0]) {
+                        if (string.indexOf("oktheatersite")>=0) {
+                            wpBlogLinks.push(string.replace('href="','').replace('"','').replace(' ', '')) 
+                        }
+                    }
+                    wpBlogLinks.shift()
                 }
+                console.log(wpBlogLinks)
 
                 var newImgLinks = [];
                 newImgLinks.push(data[i].content.rendered.match(/data-orig-file=(.*?) /g));
@@ -91,6 +94,7 @@ class Post extends Component {
                   }
                 }
 
+                console.log(newImgLinks)
                 let postHtml = data[i].content.rendered
                     .replace(/w=163&h=219/g, 'w=704&h=523')
                     .replace(/w=225&h=303/g, 'w=704&h=523')
