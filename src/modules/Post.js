@@ -70,21 +70,25 @@ class Post extends Component {
 
                 var wpBlogLinks = [];
                 wpBlogLinks.push(data[i].content.rendered.match(/href=(.*?) /g));
-                for (let string of wpBlogLinks[0]) {
-                    wpBlogLinks.push(string.replace('href="','').replace('"','').replace(' ', '')) 
+                if (wpBlogLinks[0]) {
+                  for (let string of wpBlogLinks[0]) {
+                      wpBlogLinks.push(string.replace('href="','').replace('"','').replace(' ', '')) 
+                  }
+                  wpBlogLinks.shift()
                 }
-                wpBlogLinks.shift()
 
                 var newImgLinks = [];
                 newImgLinks.push(data[i].content.rendered.match(/data-orig-file=(.*?) /g));
-                for (let string of newImgLinks[0]) {
-                    newImgLinks.push(string.replace('data-orig-file="','').replace('"','').replace(' ', '')) 
-                }
-                newImgLinks.shift()
-                for (let string of newImgLinks) {
-                    if (string.match(/w=/g)) {
-                        newImgLinks.shift()
-                    }
+                if (newImgLinks[0]) {
+                  for (let string of newImgLinks[0]) {
+                      newImgLinks.push(string.replace('data-orig-file="','').replace('"','').replace(' ', '')) 
+                  }
+                  newImgLinks.shift()
+                  for (let string of newImgLinks) {
+                      if (string.match(/w=/g)) {
+                          newImgLinks.shift()
+                      }
+                  }
                 }
 
                 let postHtml = data[i].content.rendered
