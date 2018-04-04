@@ -120,8 +120,6 @@ render() {
                 <div className='pageBody'>
                     <h1 dangerouslySetInnerHTML={{ __html: this.state.postTitle}}
                         className='postTitle' />
-                    <h4 dangerouslySetInnerHTML={{ __html: this.state.postDate}}
-                        className='postDate' />
                     <p dangerouslySetInnerHTML={{ __html: this.state.postText}}/>
                     <br/>
                 </div>
