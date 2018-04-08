@@ -85,18 +85,18 @@ class Okvideo extends Component {
         for (let i=0;i<postThumbnails.length;i++){
             currentPosts.push({title: postTitles[i], video: postThumbnails[i], url: slugs[i], img: vidImages[i]})
         }
-        if (postTitles.length > 9) {
-            for (let i=9;i<postTitles.length;i++){
+        if (postTitles.length > 6) {
+            for (let i=6;i<postTitles.length;i++){
                 previousPosts.push(postTitles[i])
             }
-            for (let i=9;i<slugs.length;i++){
+            for (let i=6;i<slugs.length;i++){
                 previousSlugs.push(slugs[i])
             }
         }
         for (let i=0;i<previousPosts.length;i++){
             prevPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
-        for (let i=0;i<9;i++) {
+        for (let i=0;i<6;i++) {
           dispPosts.push(currentPosts[i])
         }
         this.setState({ 
