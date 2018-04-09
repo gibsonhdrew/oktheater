@@ -105,6 +105,10 @@ class Post extends Component {
                     postHtml = postHtml.replace(wpBlogLinks[w], newImgLinks[w])
                 }
 
+                if (this.props.location.pathname.includes('/okbooks/')) {
+                    postHtml = postHtml.replace(/size-full/g, '')
+                }
+
                 this.setState({
                     postTitle : data[i].title.rendered,
                     postText : postHtml,

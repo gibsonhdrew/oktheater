@@ -19,7 +19,7 @@ class Okbooks extends Component {
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 178) { // wp tag 'books'
                 posts.push(data[i].title.rendered)
-                posts.push(data[i].content.rendered)
+                posts.push(data[i].content.rendered.replace(/size-full /g,''))
                 slugs.push(data[i].slug)
             }
         }
