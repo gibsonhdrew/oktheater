@@ -57,10 +57,26 @@ class Oktheater extends Component {
                         { 
                             this.state.currentPosts.map(function(slug, i){
                                 return ( 
-                                    <div key={i} className='gridMap' style={{backgroundColor:'white',marginTop:'20px',marginRight:'12px'}}>
+                                    <div key={i} className='gridMap' style={{
+                                        backgroundColor:'white',
+                                        marginTop:'20px',
+                                        marginRight:'12px'
+                                    }}>
                                       <Link key={i} to={'/oktheater/'+slug.url}>
-                                          <img src={slug.img} alt='Img' style={{height: '78%',objectFit:'cover'}}/>
-                                          <p key={i} style={{color:'#222222',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
+                                          <img src={slug.img} alt='Img' style={{
+                                              height: '100%',
+                                              objectFit:'cover'
+                                          }}/>
+                                          <p key={i} style={{
+                                              color:'white',
+                                              backgroundColor: '#222222',
+                                              width: 'calc(100% - 2px)',
+                                              opacity: '0.8',
+                                              marginTop: '-38px',
+                                              paddingTop: '8px',
+                                              height: '30px',
+                                              fontWeight:'bold'
+                                          }} dangerouslySetInnerHTML={{ __html: slug.title}}/>
                                       </Link> 
                                     </div>
                                 )
