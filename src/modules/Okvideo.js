@@ -128,10 +128,28 @@ class Okvideo extends Component {
                         { 
                             this.state.currentPosts.map(function(slug, i){
                                 return ( 
-                                    <div key={i} className='gridMapVideo fades' style={{backgroundColor:'white',marginTop:'20px',marginRight:'15px'}}>
+                                    <div key={i} className='gridMapVideo fades' style={{
+                                        backgroundColor:'white',
+                                        marginTop:'20px',
+                                        marginRight:'15px'
+                                    }}>
                                       <Link key={i} to={'/okvideo/'+slug.url}>
-                                          <img src={slug.img} alt='img' style={{border:'0px',height:'80%',width:'100%',objectFit:'cover'}}/>
-                                          <p key={i} style={{color:'#222222',marginLeft:'4px',fontWeight:'bold'}} dangerouslySetInnerHTML={{ __html: slug.title}}/>
+                                          <img src={slug.img} alt='img' style={{
+                                              border:'0px',
+                                              height:'100%',
+                                              width:'100%',
+                                              objectFit:'cover'
+                                          }}/>
+                                          <p key={i} style={{
+                                              color:'white',
+                                              width:'calc(100% - 2px)', 
+                                              height: '30px',
+                                              marginTop: '-38px',
+                                              paddingTop: '8px',
+                                              backgroundColor: '#222222',
+                                              opacity:'0.8', 
+                                              fontWeight:'bold'
+                                          }} dangerouslySetInnerHTML={{ __html: slug.title}}/>
                                       </Link> 
                                     </div>
                                 )
