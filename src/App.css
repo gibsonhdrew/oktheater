@@ -550,7 +550,7 @@ iframe {
 }
 
 /* MOBILE LAYOUT */
-@media screen and (max-width: 800px) {
+@media screen and (max-device-width: 800px) {
 
     * {
         max-width: 100vw;
