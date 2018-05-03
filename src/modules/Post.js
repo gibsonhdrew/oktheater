@@ -15,6 +15,7 @@ class Post extends Component {
             .replace('/okvideo/','')
             .replace('/okradio/','')
             .replace('/okbooks/','')
+            .replace('/okmoto/','')
             .replace('/news/','')
 
         if (this.props.location.pathname.includes('/oktheater/')) {
@@ -28,6 +29,9 @@ class Post extends Component {
         }
         if (this.props.location.pathname.includes('/okbooks/')) {
             backTo = '/okbooks'
+        }
+        if (this.props.location.pathname.includes('/okmoto/')) {
+            backTo = '/okmoto'
         }
         if (this.props.location.pathname.includes('/news/')) {
             backTo = '/news'

@@ -8,6 +8,7 @@ import Oktheater from './modules/Oktheater'
 import Okvideo from './modules/Okvideo'
 import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
+import Okmoto from './modules/Okmoto'
 import Contacts from './modules/Contacts'
 import Post from './modules/Post'
 import News from './modules/News'
@@ -17,6 +18,7 @@ import oktheater from './images/navbar/oktheater.png';
 import okvideo from './images/navbar/okvideo.png';
 import okradio from './images/navbar/okradio.png';
 import okbooks from './images/navbar/okbooks.png';
+import okmoto from './images/navbar/okmoto.png';
 import mailinglist from './images/footer/mailinglist.png';
 import facebook from './images/footer/facebook.png';
 import contact from './images/footer/contact.png';
@@ -93,8 +95,13 @@ class Header extends Component {
                         <img src={okradio} alt='OK Radio' className='navItem'/>
                         <div className='lineHide'/>
                     </Link>
+
                     <Link className='navLink' to='/okbooks'>
                         <img src={okbooks} alt='OK Books' className='navItem'/>
+                        <div className='lineHide'/>
+                    </Link>
+                    <Link className='navLink' to='/okmoto'>
+                        <img src={okmoto} alt='OK Moto' className='navItem'/>
                         <div className='lineHide'/>
                     </Link>
                 </ul>
@@ -146,6 +153,14 @@ class Main extends Component {
                     <Route path='/okbooks/:ok' render={(props) => (
                         <Post {...props} wpData={this.props.wpData} />
                     )}/>
+
+                <Route exact path='/okmoto' render={(props) => (
+                    <Okmoto {...props} wpData={this.props.wpData} />
+                )}/>
+                  <Route path='/okmoto/:ok' render={(props) => (
+                      <Post {...props} wpData={this.props.wpData} />
+                  )}/>
+
             </div>
         );
     }
