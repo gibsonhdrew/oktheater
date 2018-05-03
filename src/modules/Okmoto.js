@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import okmoto from '../images/pagetitles/okmoto.png';
 import hr2 from '../images/hr2.png';
 import previous from '../images/previous.png';
 
@@ -16,7 +15,6 @@ class Okmoto extends Component {
         var previousPosts = []
         var previousSlugs = []
         let data = this.props.wpData
-        console.log(data)
         for (let i=0;i<data.length;i++) {
             if (data[i].tags[0] === 13936) { // wp tag 'moto'
                 posts.push(data[i].title.rendered)
