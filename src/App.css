@@ -65,15 +65,24 @@ p a {
 
 .gallery-row {
   display: flex;
-  max-height: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: 100% !important;
 }
 
-.gallery-group img {
-  margin: 4px;
+.gallery-row img {
 }
 
-.tiled-gallery-item {
+.tiled-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid white;
+}
+
+.gallery-group {
+    height: 90% !important;
 }
 
 .gridMap p, .gridMapVideo p {
@@ -577,59 +586,57 @@ iframe {
     }
 
     .tiled-gallery {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      min-width: 100%;
-      max-width: 100%;
-      width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
       margin-left: -6px;
     }
 
     .tiled-gallery img, .gallery-row img, .gallery-group img, .tiled-gallery-item img, .tiled-gallery-item-large img {
+        flex-wrap: wrap;
         min-width: 100%;
         max-width: 100%;
         width: 100%;
         object-fit: cover;
         object-position: 0 -40px;
-        height: 220px;
-        max-height: 220px;
-        min-height: 220px;
-        display: block;
+        height: 220px !important;
+        max-height: 220px !important;
+        min-height: 220px !important;
+        border: 4px solid white;
         opacity: 1;
     }
     .gallery-row {
-        display: block;
+        flex-wrap: wrap;
         min-width: 100%;
         max-width: 100%;
         width: 100%;
-        height: 220px;
-        max-height: 220px;
-        min-height: 220px;
-        padding-bottom: 10px;
+        height: 220px !important;
+        max-height: 220px !important;
+        min-height: 220px !important;
     }
 
     .gallery-group, images-1 {
         min-width: 100%;
         max-width: 100%;
         width: 100%;
-        height: 220px;
-        max-height: 220px;
-        min-height: 220px;
-        padding-bottom: 10px;
     }
 
-    .tiled-gallery-item {
+    .tiled-gallery-item img {
         min-width: 100%;
         max-width: 100%;
         width: 100%;
-        height: 220px;
-        max-height: 220px;
-        min-height: 220px;
-        padding-bottom: 10px;
+        height: 220px !important;
+        max-height: 220px !important;
+        min-height: 220px !important;
     }
 
     .type-rectangular, .tiled-gallery-unresized {
         height: 1170px;
+        margin-bottom: 200px;
     }
 
     .gridMap {
