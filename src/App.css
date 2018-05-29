@@ -98,7 +98,7 @@ p a {
   width: 80%;
 }
 
-.gridMap:hover {
+.gridMap:hover, .gridMapVideo:hover {
   opacity: 0.8;
 }
 
