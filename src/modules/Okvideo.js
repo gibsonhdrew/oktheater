@@ -6,6 +6,7 @@ import process_practice from '../images/video/process_practice.png';
 import animations from '../images/video/animations.jpg';
 import trailers from '../images/video/trailers.png';
 import making_of from '../images/video/making_of.jpg';
+import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
 
 
 class Okvideo extends Component {
@@ -114,7 +115,7 @@ class Okvideo extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/screen-tests'}>
-                                <img className='gmVideoImg' src={process_practice} alt='img' style={{
+                                <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
