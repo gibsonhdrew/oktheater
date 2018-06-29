@@ -442,9 +442,10 @@ iframe {
 .featuredTitle {
     color: #FFFFFF;
     text-shadow: 2px 2px 6px #333333;
-    height: 60px;
+    height: 70px;
+    margin-top: -10px;
     line-height: 130%;
-    font-size: 20px;
+    font-size: 19px;
     background-color: rgba(0,0,0,0.7);
     width: 100%;
     opacity: 0.99;
@@ -454,7 +455,7 @@ iframe {
 .featuredTitle h3 {
     display: inline-block;
     margin-left: 16px;
-    margin-top: 18px;
+    margin-top: 14px;
 }
 
 
@@ -789,6 +790,7 @@ iframe {
         height: 66px;
         line-height: 130%;
         font-size: 16px;
+        margin-top: 0;
         opacity: 0.99;
         z-index: 11;
         display: flex;
