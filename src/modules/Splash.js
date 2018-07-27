@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import hr4 from '../images/hr4.png'
 
 
 class Splash extends Component {
@@ -33,10 +34,17 @@ class Splash extends Component {
                   <h3 style={{marginLeft: '60%',marginTop:'30px'}}>
                     -Franz Kafka
                   </h3>
-                  <br/>
-          <br/>
-          <br/>
-                  <h2 className='fades' style={{marginLeft: '40%', color:'#555555'}}>
+                  <br/><br/><br/><br/><br/>
+                  <img src={hr4} style={{
+                    width: '35%',
+                    display:'block',
+                    margin:'0 auto',
+                    opacity:'0.2'
+                  }}/>
+                  <h2 className='fades' style={{
+                    textAlign:'center',
+                    color:'#888888'
+                  }}>
                     Enter Site  
                   </h2>
                 </div>
