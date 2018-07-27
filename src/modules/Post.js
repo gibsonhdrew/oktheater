@@ -13,16 +13,23 @@ class Post extends Component {
         var keyword = this.props.location.pathname
             .replace('/oktheater/','')
             .replace('/okvideo/','')
+            .replace('makingof/','')
+            .replace('processpractice/','')
             .replace('/okradio/','')
             .replace('/okbooks/','')
             .replace('/okmoto/','')
             .replace('/news/','')
 
+      console.log(keyword)
         if (this.props.location.pathname.includes('/oktheater/')) {
             backTo = '/oktheater'
         }
-        if (this.props.location.pathname.includes('/okvideo/')) {
-            backTo = '/okvideo'
+        if (this.props.location.pathname.includes('/okvideo/makingof/m')) {
+          backTo = '/okvideo/makingof'
+        } else if (this.props.location.pathname.includes('/okvideo/processpractice/p')) {
+          backTo = '/okvideo/processpractice'
+        } else if (this.props.location.pathname.includes('/okvideo/')) {
+          backTo = '/okvideo'
         }
         if (this.props.location.pathname.includes('/okradio/')) {
             backTo = '/okradio'

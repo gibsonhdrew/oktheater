@@ -9,11 +9,11 @@ import making_of from '../images/video/making_of.jpg';
 import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
 
 
-class Okvideo extends Component {
+class Okvideo_makingof extends Component {
     render() {  
         return (
             <div className='oktBody fades'>
-                <img src={okvideo} alt='OK Video' className='pageTitle'/>
+                <h2>Making-of</h2>
                 <div className='pageBody'>
                     <div className='postGrid' style={{display:'flex',flexWrap:'wrap'}}>
 
@@ -21,8 +21,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/trailers'}>
+                        }} hidden>
+                            <Link to={'/okvideo/makingof/making-of-no-president'}>
                                 <img className='gmVideoImg' src={trailers} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -36,7 +36,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Trailers</p>
+                                }}>No President</p>
                             </Link>
                         </div>
 
@@ -45,7 +45,7 @@ class Okvideo extends Component {
                             marginTop:'20px',
                             marginRight:'15px'
                         }}>
-                            <Link to={'/okvideo/makingof'}>
+                            <Link to={'/okvideo/makingof/making-of-kinder-der-toten'}>
                                 <img className='gmVideoImg' src={making_of} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -59,7 +59,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Making-of</p>
+                                }}>Kinder der Toten</p>
                             </Link>
                         </div>
 
@@ -68,7 +68,30 @@ class Okvideo extends Component {
                             marginTop:'20px',
                             marginRight:'15px'
                         }}>
-                            <Link to={'/okvideo/processpractice'}>
+                            <Link to={'/okvideo/makingof/making-of-deutschland-2071'}>
+                                <img className='gmVideoImg' src={making_of} alt='img' style={{
+                                    height:'100%',
+                                    objectFit:'cover'
+                                }}/>
+                                <p style={{
+                                    color:'white',
+                                    width:'calc(100% - 2px)', 
+                                    height: '30px',
+                                    marginTop: '-38px',
+                                    paddingTop: '8px',
+                                    backgroundColor: '#222222',
+                                    opacity:'0.8', 
+                                    fontWeight:'bold'
+                                }}>Deutschland 2071</p>
+                            </Link>
+                        </div>
+
+                        <div className='gridMapVideo fades' style={{
+                            backgroundColor:'white',
+                            marginTop:'20px',
+                            marginRight:'15px'
+                        }}>
+                            <Link to={'/okvideo/makingof/making-of-die-nibelungen'}>
                                 <img className='gmVideoImg' src={process_practice} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -82,7 +105,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Process / Practice</p>
+                                }}>Die Nibelungen</p>
                             </Link>
                         </div>
 
@@ -90,8 +113,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/animations'}>
+                        }} hidden>
+                            <Link to={'/okvideo/makingof/making-of-life-and-times-episode-9'}>
                                 <img className='gmVideoImg' src={animations} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -105,7 +128,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Animations</p>
+                                }}>Life and Times Episode 9</p>
                             </Link>
                         </div>
 
@@ -113,8 +136,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/screen-tests'}>
+                        }} hidden>
+                            <Link to={'/okvideo/makingof/making-of-life-and-times-episode-7'}>
                                 <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -128,18 +151,39 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Screen Tests</p>
+                                }}>Life and Times Episode 7</p>
                             </Link>
                         </div>
+
+                        <div className='gridMapVideo fades' style={{
+                            backgroundColor:'white',
+                            marginTop:'20px',
+                            marginRight:'15px'
+                        }} hidden>
+                            <Link to={'/okvideo/makingof/making-of-life-and-times-episode-6'}>
+                                <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
+                                    height:'100%',
+                                    objectFit:'cover'
+                                }}/>
+                                <p style={{
+                                    color:'white',
+                                    width:'calc(100% - 2px)', 
+                                    height: '30px',
+                                    marginTop: '-38px',
+                                    paddingTop: '8px',
+                                    backgroundColor: '#222222',
+                                    opacity:'0.8', 
+                                    fontWeight:'bold'
+                                }}>Life and Times Episode 6</p>
+                            </Link>
+                        </div>
+
                     </div>
 
-                    <br/>
-                    <br/>
-                    <br/><br/>
                 </div>
             </div>
         )
     }
 }
 
-export default Okvideo;
+export default Okvideo_makingof;

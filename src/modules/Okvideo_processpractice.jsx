@@ -9,11 +9,11 @@ import making_of from '../images/video/making_of.jpg';
 import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
 
 
-class Okvideo extends Component {
+class Okvideo_processpractice extends Component {
     render() {  
         return (
             <div className='oktBody fades'>
-                <img src={okvideo} alt='OK Video' className='pageTitle'/>
+                <h2>Process / Practice</h2>
                 <div className='pageBody'>
                     <div className='postGrid' style={{display:'flex',flexWrap:'wrap'}}>
 
@@ -21,8 +21,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/trailers'}>
+                        }} hidden>
+                            <Link to={'/okvideo/processpractice/process-practice-deutschland-2071'}>
                                 <img className='gmVideoImg' src={trailers} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -36,7 +36,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Trailers</p>
+                                }}>Deutschland 2071</p>
                             </Link>
                         </div>
 
@@ -44,8 +44,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/makingof'}>
+                        }} hidden>
+                            <Link to={'/okvideo/processpractice/process-practice-die-nibelungen'}>
                                 <img className='gmVideoImg' src={making_of} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -59,7 +59,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Making-of</p>
+                                }}>Die Nibelungen</p>
                             </Link>
                         </div>
 
@@ -68,7 +68,7 @@ class Okvideo extends Component {
                             marginTop:'20px',
                             marginRight:'15px'
                         }}>
-                            <Link to={'/okvideo/processpractice'}>
+                            <Link to={'/okvideo/processpractice/process-practice-life-and-times-episode-7'}>
                                 <img className='gmVideoImg' src={process_practice} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -82,7 +82,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Process / Practice</p>
+                                }}>Life and Times Episode 7</p>
                             </Link>
                         </div>
 
@@ -91,7 +91,7 @@ class Okvideo extends Component {
                             marginTop:'20px',
                             marginRight:'15px'
                         }}>
-                            <Link to={'/okvideo/animations'}>
+                            <Link to={'/okvideo/processpractice/process-practice-life-and-times-episode-8'}>
                                 <img className='gmVideoImg' src={animations} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -105,7 +105,7 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Animations</p>
+                                }}>Life and Times Episode 8</p>
                             </Link>
                         </div>
 
@@ -113,8 +113,8 @@ class Okvideo extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }}>
-                            <Link to={'/okvideo/screen-tests'}>
+                        }} hidden>
+                            <Link to={'/okvideo/processpractice/process-practice-life-and-times-episode-5'}>
                                 <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
@@ -128,18 +128,62 @@ class Okvideo extends Component {
                                     backgroundColor: '#222222',
                                     opacity:'0.8', 
                                     fontWeight:'bold'
-                                }}>Screen Tests</p>
+                                }}>Life and Times Episode 5</p>
                             </Link>
                         </div>
+
+                        <div className='gridMapVideo fades' style={{
+                            backgroundColor:'white',
+                            marginTop:'20px',
+                            marginRight:'15px'
+                        }} hidden>
+                            <Link to={'/okvideo/processpractice/process-practice-life-and-times-episodes-3-4'}>
+                                <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
+                                    height:'100%',
+                                    objectFit:'cover'
+                                }}/>
+                                <p style={{
+                                    color:'white',
+                                    width:'calc(100% - 2px)', 
+                                    height: '30px',
+                                    marginTop: '-38px',
+                                    paddingTop: '8px',
+                                    backgroundColor: '#222222',
+                                    opacity:'0.8', 
+                                    fontWeight:'bold'
+                                }}>Life and Times Episodes 3&4</p>
+                            </Link>
+                        </div>
+
+                        <div className='gridMapVideo fades' style={{
+                            backgroundColor:'white',
+                            marginTop:'20px',
+                            marginRight:'15px'
+                        }} hidden>
+                            <Link to={'/okvideo/processpractice/process-pratice-no-dice'}>
+                                <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
+                                    height:'100%',
+                                    objectFit:'cover'
+                                }}/>
+                                <p style={{
+                                    color:'white',
+                                    width:'calc(100% - 2px)', 
+                                    height: '30px',
+                                    marginTop: '-38px',
+                                    paddingTop: '8px',
+                                    backgroundColor: '#222222',
+                                    opacity:'0.8', 
+                                    fontWeight:'bold'
+                                }}>No Dice</p>
+                            </Link>
+                        </div>
+
                     </div>
 
-                    <br/>
-                    <br/>
-                    <br/><br/>
                 </div>
             </div>
         )
     }
 }
 
-export default Okvideo;
+export default Okvideo_processpractice;

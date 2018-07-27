@@ -6,6 +6,8 @@ import Weareok from './modules/Weareok'
 import Splash from './modules/Splash'
 import Oktheater from './modules/Oktheater'
 import Okvideo from './modules/Okvideo'
+import Okvideo_makingof from './modules/Okvideo_makingof'
+import Okvideo_processpractice from './modules/Okvideo_processpractice'
 import Okradio from './modules/Okradio'
 import Okbooks from './modules/Okbooks'
 import Okmoto from './modules/Okmoto'
@@ -61,7 +63,7 @@ class App extends Component {
                 <div className='app'>
                     <div>
                         <ScrollToTopOnNav/>
-                    </div>    
+                    </div>
                     <Header wpData={this.state.wpData}/>
                     <Main wpData={this.state.wpData}/>
                     <Footer/>
@@ -90,7 +92,7 @@ class Header extends Component {
                     <Link className='navLink' to='/okvideo'>
                         <img src={okvideo} alt='OK Video' className='navItem'/>
                         <div className='lineHide'/>
-                    </Link>  
+                    </Link>
                     <Link className='navLink' to='/okradio'>
                         <img src={okradio} alt='OK Radio' className='navItem'/>
                         <div className='lineHide'/>
@@ -111,7 +113,7 @@ class Header extends Component {
 }
 
 class Main extends Component {
-    render() {
+  render() {
         return (
             <div className='mainBody'> 
                 <Route exact path='/' render={(props) => (
@@ -136,8 +138,20 @@ class Main extends Component {
                 <Route exact path='/okvideo' render={(props) => (
                     <Okvideo {...props} wpData={this.props.wpData} />
                 )}/>
-                    <Route path='/okvideo/:ok' render={(props) => (
+                    <Route exact path='/okvideo/makingof' render={(props) => (
+                      <Okvideo_makingof {...props} wpData={this.props.wpData} />
+                    )}/>
+                      <Route path='/okvideo/makingof/:ok' render={(props) => (
                         <Post {...props} wpData={this.props.wpData} />
+                      )}/>
+                    <Route exact path='/okvideo/processpractice' render={(props) => (
+                      <Okvideo_processpractice {...props} wpData={this.props.wpData} />
+                    )}/>
+                      <Route path='/okvideo/processpractice/:ok' render={(props) => (
+                        <Post {...props} wpData={this.props.wpData} />
+                      )}/>
+                    <Route exact path='/okvideo/:ok' render={(props) => (
+                      <Post {...props} wpData={this.props.wpData} />
                     )}/>
 
                 <Route exact path='/okradio' render={(props) => (
