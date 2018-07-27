@@ -7,6 +7,9 @@ import animations from '../images/video/animations.jpg';
 import trailers from '../images/video/trailers.png';
 import making_of from '../images/video/making_of.jpg';
 import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
+import nb_thumb from '../images/makingof-thumbs/nibelungen.jpg';
+import d2071 from '../images/makingof-thumbs/deutschland.jpg';
+import kinder from '../images/makingof-thumbs/kinder.jpg';
 
 
 class Okvideo_makingof extends Component {
@@ -46,7 +49,7 @@ class Okvideo_makingof extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/makingof/making-of-kinder-der-toten'}>
-                                <img className='gmVideoImg' src={making_of} alt='img' style={{
+                                <img className='gmVideoImg' src={kinder} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
@@ -69,7 +72,7 @@ class Okvideo_makingof extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/makingof/making-of-deutschland-2071'}>
-                                <img className='gmVideoImg' src={making_of} alt='img' style={{
+                                <img className='gmVideoImg' src={d2071} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
@@ -92,7 +95,7 @@ class Okvideo_makingof extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/makingof/making-of-die-nibelungen'}>
-                                <img className='gmVideoImg' src={process_practice} alt='img' style={{
+                                <img className='gmVideoImg' src={nb_thumb} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>

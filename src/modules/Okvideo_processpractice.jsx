@@ -7,6 +7,8 @@ import animations from '../images/video/animations.jpg';
 import trailers from '../images/video/trailers.png';
 import making_of from '../images/video/making_of.jpg';
 import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
+import lt7 from '../images/processpractice-thumbs/lt7.jpg';
+import lt8 from '../images/processpractice-thumbs/lt8.jpg';
 
 
 class Okvideo_processpractice extends Component {
@@ -69,7 +71,7 @@ class Okvideo_processpractice extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/processpractice/process-practice-life-and-times-episode-7'}>
-                                <img className='gmVideoImg' src={process_practice} alt='img' style={{
+                                <img className='gmVideoImg' src={lt7} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
@@ -92,7 +94,7 @@ class Okvideo_processpractice extends Component {
                             marginRight:'15px'
                         }}>
                             <Link to={'/okvideo/processpractice/process-practice-life-and-times-episode-8'}>
-                                <img className='gmVideoImg' src={animations} alt='img' style={{
+                                <img className='gmVideoImg' src={lt8} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
