@@ -44,6 +44,9 @@ p a {
   width: 55vw;
   text-decoration: none;
   padding: 40px;
+  -moz-box-shadow: 0px 5px 5px rgba(68, 68, 68, 0.05);
+  -webkit-box-shadow: 0px 5px 5px rgba(68, 68, 68, 0.05);
+  box-shadow: 0px 5px 5px rgba(68, 68, 68, 0.05);
 }
 
 .kafka a {
@@ -547,7 +550,15 @@ iframe {
 }
 .splashBG {
   height: 100vh;
+  animation: animatedBackground 8s linear infinite;
+  background-position: 0px 0px;
 }
+
+@keyframes animatedBackground {
+  from { background-position: 0px 0px; }
+	to { background-position: -387px 0px; }
+}
+
 @keyframes fade
 {
   0%   {opacity:1}
