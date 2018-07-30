@@ -550,8 +550,6 @@ iframe {
 }
 .splashBG {
   height: 100vh;
-  animation: animatedBackground 8s linear infinite;
-  background-position: 0px 0px;
 }
 
 @keyframes animatedBackground {

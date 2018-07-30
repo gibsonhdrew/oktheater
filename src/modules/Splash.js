@@ -13,8 +13,6 @@ class Splash extends Component {
             }}>
             <div className='splashBG' style={{
               backgroundColor:'#F6F6F6',
-              backgroundImage:`url(${kafka})`,
-              backgroundRepeat:'repeat',
               width:'100vw',
               opacity:'0.99',
               zIndex:'101',
