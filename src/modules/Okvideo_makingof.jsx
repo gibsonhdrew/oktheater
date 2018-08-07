@@ -10,6 +10,7 @@ import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
 import nb_thumb from '../images/makingof-thumbs/nibelungen.jpg';
 import d2071 from '../images/makingof-thumbs/deutschland.jpg';
 import kinder from '../images/makingof-thumbs/kinder.jpg';
+import no_president from '../images/makingof-thumbs/no-president.jpg';
 
 
 class Okvideo_makingof extends Component {
@@ -24,9 +25,9 @@ class Okvideo_makingof extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }} hidden>
+                        }}>
                             <Link to={'/okvideo/makingof/making-of-no-president'}>
-                                <img className='gmVideoImg' src={trailers} alt='img' style={{
+                                <img className='gmVideoImg' src={no_president} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
