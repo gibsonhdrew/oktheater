@@ -11,6 +11,7 @@ import nb_thumb from '../images/makingof-thumbs/nibelungen.jpg';
 import d2071 from '../images/makingof-thumbs/deutschland.jpg';
 import kinder from '../images/makingof-thumbs/kinder.jpg';
 import no_president from '../images/makingof-thumbs/no-president.jpg';
+import lte07 from '../images/makingof-thumbs/lte07.jpg';
 
 
 class Okvideo_makingof extends Component {
@@ -140,9 +141,9 @@ class Okvideo_makingof extends Component {
                             backgroundColor:'white',
                             marginTop:'20px',
                             marginRight:'15px'
-                        }} hidden>
+                        }}>
                             <Link to={'/okvideo/makingof/making-of-life-and-times-episode-7'}>
-                                <img className='gmVideoImg' src={berlin_screen_tests} alt='img' style={{
+                                <img className='gmVideoImg' src={lte07} alt='img' style={{
                                     height:'100%',
                                     objectFit:'cover'
                                 }}/>
