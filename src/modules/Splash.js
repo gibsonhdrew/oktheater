@@ -27,7 +27,7 @@ class Splash extends Component {
                 <img className='kafka_typed fades' src={kafkatyped} style={{
                   position:'absolute',
                   top:'20px',
-                  left: '32%',
+                  left: '24%',
                   height:'95vh',
                   zIndex:'5000'
                 }}/>
