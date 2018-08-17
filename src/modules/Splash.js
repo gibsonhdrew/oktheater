@@ -28,7 +28,7 @@ class Splash extends Component {
                   position:'absolute',
                   top:'20px',
                   left: '24%',
-                  height:'95vh',
+                  height:'90vh',
                   zIndex:'5000'
                 }}/>
           </Link>
