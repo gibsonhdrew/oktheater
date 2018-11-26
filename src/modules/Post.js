@@ -20,7 +20,6 @@ class Post extends Component {
             .replace('/okmoto/','')
             .replace('/news/','')
 
-      console.log(keyword)
         if (this.props.location.pathname.includes('/oktheater/')) {
             backTo = '/oktheater'
         }
@@ -89,7 +88,6 @@ class Post extends Component {
                     }
                     wpBlogLinks.shift()
                 }
-                console.log(wpBlogLinks)
 
                 var newImgLinks = [];
                 newImgLinks.push(data[i].content.rendered.match(/data-orig-file=(.*?) /g));
@@ -105,7 +103,6 @@ class Post extends Component {
                   }
                 }
 
-                console.log(newImgLinks)
                 let postHtml = data[i].content.rendered
                     .replace(/w=163&h=219/g, 'w=704&h=523')
                     .replace(/w=225&h=303/g, 'w=704&h=523')
@@ -113,6 +110,12 @@ class Post extends Component {
                     .replace(/w=185&h=250/g, 'w=285&h=384') 
 
                 for (let w=0;w<wpBlogLinks.length;w++) {
+
+                    // hack for one of the news posts
+                    if (wpBlogLinks[0] == "https://oktheatersite.wordpress.com/2018/02/23/kinder-der-toten/>Die") {
+                      wpBlogLinks.shift();
+                    }
+
                     postHtml = postHtml.replace(wpBlogLinks[w], newImgLinks[w])
                 }
 
