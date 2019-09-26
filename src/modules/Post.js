@@ -103,6 +103,13 @@ class Post extends Component {
                   }
                 }
 
+                if (newImgLinks.length >= wpBlogLinks.length) {
+                  let amountExtra = newImgLinks.length - wpBlogLinks.length;
+                  for (let i = 0; i < amountExtra; i++) {
+                    newImgLinks.shift();
+                  }
+                }
+
                 let postHtml = data[i].content.rendered
                     .replace(/w=163&h=219/g, 'w=704&h=523')
                     .replace(/w=225&h=303/g, 'w=704&h=523')
