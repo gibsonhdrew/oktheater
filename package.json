@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://gibsonhdrew.github.io/oktheater",
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.21.1",
     "react": "^16.0.0",
     "react-crossfade-image": "^1.1.0",
     "react-dom": "^16.0.0",
