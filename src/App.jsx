@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
-import Weareok from './modules/Weareok'
-import Splash from './modules/Splash'
-import Oktheater from './modules/Oktheater'
-import Okvideo from './modules/Okvideo'
-import Okvideo_makingof from './modules/Okvideo_makingof'
-import Okvideo_processpractice from './modules/Okvideo_processpractice'
-import Okradio from './modules/Okradio'
-import Okbooks from './modules/Okbooks'
-import Okmoto from './modules/Okmoto'
-import Contacts from './modules/Contacts'
-import Post from './modules/Post'
-import News from './modules/News'
+import Weareok from './modules/Weareok';
+import Splash from './modules/Splash';
+import Oktheater from './modules/Oktheater';
+import Okvideo from './modules/Okvideo';
+import Okvideo_makingof from './modules/Okvideo_makingof';
+import Okvideo_processpractice from './modules/Okvideo_processpractice';
+import Okradio from './modules/Okradio';
+import Okbooks from './modules/Okbooks';
+import Okmoto from './modules/Okmoto';
+import Contacts from './modules/Contacts';
+import Post from './modules/Post';
+import News from './modules/News';
 import logo from './images/navbar/logo.png';
 import wereok from './images/navbar/wereok.png';
 import oktheater from './images/navbar/oktheater.png';
@@ -32,28 +32,30 @@ class App extends Component {
         this.state = {
         };
     }
+
     componentDidMount() {
-        let self = this
+        let self = this;
         var oldPosts;
         var allPosts;
-        axios.get('/oldposts3.json')
+        axios.get('./oldposts3.json')
             .then(function(response) {
-                oldPosts = response.data
-            })
+                oldPosts = response.data;
+            });
         axios.get('https://public-api.wordpress.com/wp/v2/sites/138138161/posts/?per_page=100')
             .then(function (response) {
-                allPosts = response.data
+                allPosts = response.data;
                 for (let i of oldPosts) {
-                    allPosts.push(i)
+                    allPosts.push(i);
                 }
                 self.setState({
                     wpData: allPosts
-                })
+                });
             })
             .catch(function (error) {
                 console.log(error);
-            })
+            });
     }
+
     render() {
         if (!this.state.wpData)
             return null;
