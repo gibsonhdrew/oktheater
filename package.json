@@ -2,6 +2,7 @@
   "name": "oktheater",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gibsonhdrew.github.io/oktheater",
   "dependencies": {
     "axios": "^0.17.0",
     "react": "^16.0.0",
@@ -15,6 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -b master -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
