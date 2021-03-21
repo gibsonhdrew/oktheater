@@ -1,0 +1,815 @@
+[
+    {
+        "id": 574,
+        "date": "2015-05-12T13:18:48",
+        "date_gmt": "2015-05-12T13:18:48",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=574"
+        },
+        "modified": "2015-05-12T13:21:53",
+        "modified_gmt": "2015-05-12T13:21:53",
+        "slug": "the-great-nature-theater-of-oklahoma-is-calling-you",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2015/05/12/the-great-nature-theater-of-oklahoma-is-calling-you/",
+        "title": {
+            "rendered": "The Great Nature Theater of Oklahoma is Calling&nbsp;You!"
+        },
+        "content": {
+            "rendered": "<p style=\"text-align:left;\"><a href=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg\"><img data-attachment-id=\"578\" data-permalink=\"https://oktheater.wordpress.com/2015/05/12/the-great-nature-theater-of-oklahoma-is-calling-you/berlin-grid-2/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=660&#038;h=393\" data-orig-size=\"3543,2110\" data-comments-opened=\"0\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}\" data-image-title=\"Berlin Grid\" data-image-description=\"\" data-medium-file=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=660&#038;h=393?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=660&#038;h=393?w=1024\" class=\" size-full wp-image-578 alignnone\" src=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=660&#038;h=393\" alt=\"Berlin Grid\" width=\"660\" height=\"393\" srcset=\"https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=660&amp;h=393 660w, https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=1320&amp;h=786 1320w, https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=150&amp;h=89 150w, https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=300&amp;h=179 300w, https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=768&amp;h=457 768w, https://oktheater.files.wordpress.com/2015/05/berlin-grid.jpg?w=1024&amp;h=610 1024w\" sizes=\"(max-width: 660px) 100vw, 660px\" /></a><a href=\"https://oktheater.files.wordpress.com/2014/09/berlin-grid.gif\"><br />\n</a>This Friday May 15th at 7:30pm Anthology Film Archives will be screening our film, The Great Nature Theater of Oklahoma is Calling You! &#8212; part of their series: <a href=\"http://anthologyfilmarchives.org/film_screenings/series/44246\" target=\"_blank\">Downtown New York Theater &#8211; Behind the Scenes</a>\u00a0&#8212;\u00a0also featuring the work of Elevator Repair Service and The Wooster Group. \u00a0The movie was made during an intense month in residence working at the Hebbel HAU 1 Theater in Berlin in the summer of 2013, and will be screened for one night only. \u00a0Don&#8217;t miss it!</p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>This Friday May 15th at 7:30pm Anthology Film Archives will be screening our film, The Great Nature Theater of Oklahoma is Calling You! &#8212; part of their series: Downtown New York Theater &#8211; Behind the Scenes\u00a0&#8212;\u00a0also featuring the work of Elevator Repair Service and The Wooster Group. \u00a0The movie was made during an intense month [&hellip;]</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+			103
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/574"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=574"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/574/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=574"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=574"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=574"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 563,
+        "date": "2013-09-30T17:47:13",
+        "date_gmt": "2013-09-30T17:47:13",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=563"
+        },
+        "modified": "2016-03-11T15:51:43",
+        "modified_gmt": "2016-03-11T15:51:43",
+        "slug": "times-square-midnight-snack",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/09/30/times-square-midnight-snack/",
+        "title": {
+            "rendered": "Times Square Midnight&nbsp;Snack"
+        },
+        "content": {
+            "rendered": "<p>Tonight is the last night to catch our Midnight Moment in Times Square &#8212; and if you missed the festivities &#8212; you can check out the video of the Midnight Snack in Times Square on Sept. 20th, <a title=\"Midnight Snack\" href=\"https://youtu.be/e2HOiAG-WaI\" target=\"_blank\">here</a>.</p>\n<div data-shortcode=\"caption\" id=\"attachment_566\" style=\"max-width: 650px\" class=\"wp-caption alignnone\"><a title=\"Midnight Snack\" href=\"https://youtu.be/e2HOiAG-WaI\" target=\"_blank\" rel=\"attachment wp-att-566\"><img data-attachment-id=\"566\" data-permalink=\"https://oktheater.wordpress.com/2013/09/30/times-square-midnight-snack/130920_tse_ntok_298/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=640&#038;h=426\" data-orig-size=\"3000,2000\" data-comments-opened=\"0\" data-image-meta=\"{&quot;aperture&quot;:&quot;3.2&quot;,&quot;credit&quot;:&quot;Ka-Man Tse&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;Midnight Snack with Nature Theater of Oklahoma\\u00a0 Pavol Liska and Kelly Copper of Nature Theater of Oklahoma invite the public for a free Midnight Snack to accompany a viewing of September&#039;s Midnight Moment, Nature Theater of Oklahoma&#039;s Life and Times: Episode 4.5. \\u00a0Complimentary snacks distributed by SnackBOX on a first-come, first-served basis, organized by IN*TANDEM creatives. September 20, 2013. Gather at 11:30 pm at Duffy Square, Broadway plaza between 46th and 47th Streets.  \\nPhotograph by Ka-Man Tse for @TSqArts. \\u00a0  \\nMidnight Moment: Nature Theater of Oklahoma, Life and Times - Episode 4.5. September 1 - 30, 2013;  11:57pm - midnight every night. \\u00a0Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. This month\\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\\u00e7aise (FIAF).&quot;,&quot;created_timestamp&quot;:&quot;1379721552&quot;,&quot;copyright&quot;:&quot;\\u00a9 Ka-Man Tse, 2013&quot;,&quot;focal_length&quot;:&quot;24&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.008&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"130920_TSE_NTOK_298\" data-image-description=\"&lt;p&gt;Midnight Snack with Nature Theater of Oklahoma\u00a0 Pavol Liska and Kelly Copper of Nature Theater of Oklahoma invite the public for a free Midnight Snack to accompany a viewing of September&#8217;s Midnight Moment, Nature Theater of Oklahoma&#8217;s Life and Times: Episode 4.5. \u00a0Complimentary snacks distributed by SnackBOX on a first-come, first-served basis, organized by IN*TANDEM creatives. September 20, 2013. Gather at 11:30 pm at Duffy Square, Broadway plaza between 46th and 47th Streets.&lt;br /&gt;\nPhotograph by Ka-Man Tse for @TSqArts. \u00a0&lt;br /&gt;\nMidnight Moment: Nature Theater of Oklahoma, Life and Times &#8211; Episode 4.5. September 1 &#8211; 30, 2013;  11:57pm &#8211; midnight every night. \u00a0Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. This month\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\u00e7aise (FIAF).&lt;/p&gt;\n\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=640&#038;h=426?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=640&#038;h=426?w=1024\" class=\"size-full wp-image-566  \" src=\"https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=640&#038;h=426\" alt=\"130920_TSE_NTOK_298\" width=\"640\" height=\"426\" srcset=\"https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=640&amp;h=426 640w, https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=1278&amp;h=852 1278w, https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=150&amp;h=100 150w, https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=300&amp;h=200 300w, https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=768&amp;h=512 768w, https://oktheater.files.wordpress.com/2013/09/130920_tse_ntok_298.jpg?w=1024&amp;h=683 1024w\" sizes=\"(max-width: 640px) 100vw, 640px\" /></a><p class=\"wp-caption-text\">photograph by Ka-Man Tse for @TSqArts. Midnight Moment: Nature Theater of Oklahoma, Life and Times &#8211; Episode 4.5. September 1 &#8211; 30, 2013; 11:57pm &#8211; midnight every night. Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. This month\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\u00e7aise (FIAF).</p></div>\n<p><em><strong>\u00a0</strong></em></p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Tonight is the last night to catch our Midnight Moment in Times Square &#8212; and if you missed the festivities &#8212; you can check out the video of the Midnight Snack in Times Square on Sept. 20th, here. \u00a0</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+			103
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/563"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=563"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/563/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=563"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=563"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=563"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "date": "2013-09-02T18:51:17",
+        "date_gmt": "2013-09-02T18:51:17",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=2"
+        },
+        "modified": "2013-09-02T18:51:21",
+        "modified_gmt": "2013-09-02T18:51:21",
+        "slug": "life-and-times-episode-4-5-has-its-midnight-moment",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/09/02/life-and-times-episode-4-5-has-its-midnight-moment/",
+        "title": {
+            "rendered": "Life and Times Episode 4.5 has its Midnight&nbsp;Moment"
+        },
+        "content": {
+            "rendered": "<div data-shortcode=\"caption\" id=\"attachment_541\" style=\"max-width: 650px\" class=\"wp-caption aligncenter\"><a href=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg\" rel=\"attachment wp-att-541\"><img data-attachment-id=\"541\" data-permalink=\"https://oktheater.wordpress.com/2013/09/02/life-and-times-episode-4-5-has-its-midnight-moment/130901_tse_ntok_065/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=640&#038;h=454\" data-orig-size=\"900,639\" data-comments-opened=\"0\" data-image-meta=\"{&quot;aperture&quot;:&quot;4.5&quot;,&quot;credit&quot;:&quot;Ka-Man Tse&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;Midnight Moment: Nature Theater of Oklahoma, Life and Times - Episode 4.5. September 1 - 30, 2013;  11:57pm - midnight every night. \\u00a0 Photograph by Ka-Man Tse for @TSqArts. \\u00a0   Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. This month\\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\\u00e7aise (FIAF). Midnight Moment: A Digital Gallery is the largest coordinated effort in history by the sign operators in Times Square to display synchronized, cutting-edge creative content at the same time every day.   The three-minute hand-drawn animation is a part of the Nature Theater of Oklahoma\\u2019s epic Life and Times series, a sixteen-hour, multi-art serial created from a single phone conversation with a 34-year-old woman, who tells her whole life story up to the present day.&quot;,&quot;created_timestamp&quot;:&quot;1378080248&quot;,&quot;copyright&quot;:&quot;\\u00a9 Ka-Man Tse, 2013&quot;,&quot;focal_length&quot;:&quot;14&quot;,&quot;iso&quot;:&quot;250&quot;,&quot;shutter_speed&quot;:&quot;0.008&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"130901_TSE_NTOK_065\" data-image-description=\"&lt;p&gt;Midnight Moment: Nature Theater of Oklahoma, Life and Times &#8211; Episode 4.5. September 1 &#8211; 30, 2013;  11:57pm &#8211; midnight every night. \u00a0 Photograph by Ka-Man Tse for @TSqArts. \u00a0   Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. This month\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\u00e7aise (FIAF). Midnight Moment: A Digital Gallery is the largest coordinated effort in history by the sign operators in Times Square to display synchronized, cutting-edge creative content at the same time every day.   The three-minute hand-drawn animation is a part of the Nature Theater of Oklahoma\u2019s epic Life and Times series, a sixteen-hour, multi-art serial created from a single phone conversation with a 34-year-old woman, who tells her whole life story up to the present day.&lt;/p&gt;\n\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=640&#038;h=454?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=640&#038;h=454?w=900\" class=\"size-full wp-image-541  \" alt=\"130901_TSE_NTOK_065\" src=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=640&#038;h=454\" width=\"640\" height=\"454\" srcset=\"https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=640&amp;h=454 640w, https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=150&amp;h=107 150w, https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=300&amp;h=213 300w, https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg?w=768&amp;h=545 768w, https://oktheater.files.wordpress.com/2013/01/130901_tse_ntok_065.jpg 900w\" sizes=\"(max-width: 640px) 100vw, 640px\" /></a><p class=\"wp-caption-text\">Midnight Moment: Nature Theater of Oklahoma, Life and Times &#8211; Episode 4.5.<br />September 1 &#8211; 30, 2013; 11:57pm &#8211; midnight every night.<br />photograph by Ka-Man Tse for @TSqArts.</p></div>\n<p>Every night in September at 11:57, you can see part of the animated movie that is <em>Life and Times &#8211; Episode 4.5</em> playing on 15 jumbotrons all over Times Square! \u00a0For more details click\u00a0<a href=\"http://www.timessquarenyc.org/times-square-arts/moment/archive/nature-theater-of-oklahoma/index.aspx#.UiTcrRYaSlI\">here</a>. \u00a0Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. \u00a0This month\u2019s program presented in partnership with Crossing the Line, the French Institute Alliance Fran\u00e7aise (FIAF).</p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Every night in September at 11:57, you can see part of the animated movie that is Life and Times &#8211; Episode 4.5 playing on 15 jumbotrons all over Times Square! \u00a0For more details click\u00a0here. \u00a0Midnight Moment is a presentation of the Times Square Advertising Coalition (TSAC) and Times Square Arts. \u00a0This month\u2019s program presented in [&hellip;]</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "image",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103	
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/2"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=2"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/2/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=2"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=2"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=2"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 535,
+        "date": "2013-06-16T21:15:07",
+        "date_gmt": "2013-06-16T21:15:07",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=535"
+        },
+        "modified": "2013-06-16T21:20:04",
+        "modified_gmt": "2013-06-16T21:20:04",
+        "slug": "the-great-nature-theater-of-oklahoma-is-calling-you-berlin",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/06/16/the-great-nature-theater-of-oklahoma-is-calling-you-berlin/",
+        "title": {
+            "rendered": "Nature Theater of Oklahoma is calling&nbsp;YOU!"
+        },
+        "content": {
+            "rendered": "<div class=\"embed-vimeo\"><iframe src=\"http://player.vimeo.com/video/68455256\" width=\"500\" height=\"281\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>\n<p>Join us in Berlin starting June 28th for BBQ, performances of <em>Romeo and Juliet,</em>\u00a0<em>Life and Times Episodes 1 &#8211; 5, </em>and much much more! \u00a0For details go to:\u00a0<a href=\"http://www.berlinerfestspiele.de/\" target=\"_blank\" rel=\"nofollow\">berlinerfestspiele.de</a>\u00a0and\u00a0<a href=\"http://www.hebbel-am-ufer.de/\" target=\"_blank\" rel=\"nofollow\">hebbel-am-ufer.de</a></p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Join us in Berlin starting June 28th for BBQ, performances of Romeo and Juliet,\u00a0Life and Times Episodes 1 &#8211; 5, and much much more! \u00a0For details go to:\u00a0berlinerfestspiele.de\u00a0and\u00a0hebbel-am-ufer.de</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103	
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/535"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=535"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/535/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=535"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=535"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=535"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 530,
+        "date": "2013-06-08T21:35:57",
+        "date_gmt": "2013-06-08T21:35:57",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=530"
+        },
+        "modified": "2013-06-08T21:35:59",
+        "modified_gmt": "2013-06-08T21:35:59",
+        "slug": "ok-instruction-manual",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/06/08/ok-instruction-manual/",
+        "title": {
+            "rendered": "OK Instruction Manual"
+        },
+        "content": {
+            "rendered": "<p><a href=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg\" rel=\"attachment wp-att-531\"><img data-attachment-id=\"531\" data-permalink=\"https://oktheater.wordpress.com/2013/06/08/ok-instruction-manual/no-no-ok-web/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=640&#038;h=226\" data-orig-size=\"945,334\" data-comments-opened=\"0\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"No,-No-OK-web\" data-image-description=\"\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=640&#038;h=226?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=640&#038;h=226?w=945\" class=\"alignleft size-full wp-image-531\" alt=\"No,-No-OK-web\" src=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=640&#038;h=226\" width=\"640\" height=\"226\" srcset=\"https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=640&amp;h=226 640w, https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=150&amp;h=53 150w, https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=300&amp;h=106 300w, https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg?w=768&amp;h=271 768w, https://oktheater.files.wordpress.com/2013/06/no-no-ok-web.jpg 945w\" sizes=\"(max-width: 640px) 100vw, 640px\" /></a></p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "image",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103	
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/530"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=530"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/530/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=530"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=530"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=530"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 525,
+        "date": "2013-05-03T16:59:50",
+        "date_gmt": "2013-05-03T16:59:50",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=525"
+        },
+        "modified": "2013-05-03T17:00:46",
+        "modified_gmt": "2013-05-03T17:00:46",
+        "slug": "ok-theater-is-coming-to-sweden-and-the-uk",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/05/03/ok-theater-is-coming-to-sweden-and-the-uk/",
+        "title": {
+            "rendered": "OK Theater is coming to Sweden and the&nbsp;UK"
+        },
+        "content": {
+            "rendered": "<p style=\"text-align:center;\"><a href=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg\" rel=\"attachment wp-att-68\"><img data-attachment-id=\"68\" data-permalink=\"https://oktheater.wordpress.com/2013/05/03/ok-theater-is-coming-to-sweden-and-the-uk/lt1_frankfurt_img_8145/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=448&#038;h=523\" data-orig-size=\"3664,4282\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;1.4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1351614841&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;160&quot;,&quot;shutter_speed&quot;:&quot;0.00625&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"LT1_Frankfurt_IMG_8145\" data-image-description=\"\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=448&#038;h=523?w=257\" data-large-file=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=448&#038;h=523?w=876\" class=\" wp-image-68 aligncenter\" alt=\"LT1_Frankfurt_IMG_8145\" src=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=448&#038;h=523\" width=\"448\" height=\"523\" srcset=\"https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=448&amp;h=523 448w, https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=896&amp;h=1046 896w, https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=128&amp;h=150 128w, https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=257&amp;h=300 257w, https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=768&amp;h=898 768w, https://oktheater.files.wordpress.com/2013/01/lt1_frankfurt_img_8145-e1357578522470.jpg?w=876&amp;h=1024 876w\" sizes=\"(max-width: 448px) 100vw, 448px\" /></a></p>\n<p>We&#8217;re packing our bags for upcoming performances of\u00a0<em>Life and Times\u00a0</em>at\u00a0<a href=\"http://www.festival.goteborg.se\" target=\"_blank\">G\u00f6teborgs Dans &amp; Teater Festival</a> and <a href=\"http://www.nnfestival.org.uk\" target=\"_blank\">Norfolk and Norwich Festival</a>\u00a0&#8211; where we officially premiere our next installment &#8211; Episodes 4.5 &amp; 5. \u00a0Hope to see you there! \u00a0Follow links for further details.</p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>We&#8217;re packing our bags for upcoming performances of\u00a0Life and Times\u00a0at\u00a0G\u00f6teborgs Dans &amp; Teater Festival and Norfolk and Norwich Festival\u00a0&#8211; where we officially premiere our next installment &#8211; Episodes 4.5 &amp; 5. \u00a0Hope to see you there! \u00a0Follow links for further details.</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103	
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/525"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=525"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/525/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=525"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=525"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=525"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 485,
+        "date": "2013-02-27T17:51:36",
+        "date_gmt": "2013-02-27T17:51:36",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=485"
+        },
+        "modified": "2013-02-27T17:52:35",
+        "modified_gmt": "2013-02-27T17:52:35",
+        "slug": "nature-theater-visits-david-garland-at-wnyc-march-3rd-at-8pm",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/02/27/nature-theater-visits-david-garland-at-wnyc-march-3rd-at-8pm/",
+        "title": {
+            "rendered": "Nature Theater visits WNYC &#8211; March 3rd at&nbsp;8pm"
+        },
+        "content": {
+            "rendered": "<p><a href=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg\" rel=\"attachment wp-att-486\"><img data-attachment-id=\"486\" data-permalink=\"https://oktheater.wordpress.com/2013/02/27/nature-theater-visits-david-garland-at-wnyc-march-3rd-at-8pm/pavol-at-wnyc-by-ilan-bachrach/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=640&#038;h=426\" data-orig-size=\"5760,3840\" data-comments-opened=\"0\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark III&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1360887286&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;32&quot;,&quot;iso&quot;:&quot;2000&quot;,&quot;shutter_speed&quot;:&quot;0.0125&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"Pavol at WNYC by Ilan Bachrach\" data-image-description=\"\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=640&#038;h=426?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=640&#038;h=426?w=1024\" class=\"alignleft size-full wp-image-486\" alt=\"Pavol at WNYC by Ilan Bachrach\" src=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=640&#038;h=426\" width=\"640\" height=\"426\" srcset=\"https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=640&amp;h=426 640w, https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=1278&amp;h=852 1278w, https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=150&amp;h=100 150w, https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=300&amp;h=200 300w, https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=768&amp;h=512 768w, https://oktheater.files.wordpress.com/2013/02/pavol-at-wnyc-by-ilan-bachrach.jpg?w=1024&amp;h=683 1024w\" sizes=\"(max-width: 640px) 100vw, 640px\" /></a>Tune in March 3rd \u00a0at 8pm to Spinning on Air on WNYC. \u00a0We will be talking with host David Garland about <em>Life and Times</em> and singing selections from Episode 1 in studio. \u00a0The broadcast will also be available on the web with video. \u00a0Check at\u00a0<a href=\"http://www.wnyc.org/shows/spinning/\">http://www.wnyc.org/shows/spinning</a></p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Tune in March 3rd \u00a0at 8pm to Spinning on Air on WNYC. \u00a0We will be talking with host David Garland about Life and Times and singing selections from Episode 1 in studio. \u00a0The broadcast will also be available on the web with video. \u00a0Check at\u00a0http://www.wnyc.org/shows/spinning</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103	
+		],
+        "jetpack-related-posts": [],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/485"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=485"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/485/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=485"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=485"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=485"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "date": "2013-01-01T18:27:58",
+        "date_gmt": "2013-01-01T18:27:58",
+        "guid": {
+            "rendered": "http://oktheater.wordpress.com/?p=12"
+        },
+        "modified": "2013-01-15T16:42:14",
+        "modified_gmt": "2013-01-15T16:42:14",
+        "slug": "12",
+        "status": "publish",
+        "type": "post",
+        "link": "https://oktheater.wordpress.com/2013/01/01/12/",
+        "title": {
+            "rendered": "Life and Times in New York&nbsp;City"
+        },
+        "content": {
+            "rendered": "<address style=\"text-align:center;\"><a href=\"http://www.undertheradarfestival.com/index.php?p=616\" target=\"_blank\"><img data-attachment-id=\"13\" data-permalink=\"https://oktheater.wordpress.com/2013/01/01/12/lt2_frankfurt_img_0754/#main\" data-orig-file=\"https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=640&#038;h=426\" data-orig-size=\"5616,3744\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;1.4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1351871011&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;500&quot;,&quot;shutter_speed&quot;:&quot;0.00625&quot;,&quot;title&quot;:&quot;&quot;}\" data-image-title=\"LT2_Frankfurt_IMG_0754\" data-image-description=\"\" data-medium-file=\"https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=640&#038;h=426?w=300\" data-large-file=\"https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=640&#038;h=426?w=1024\" class=\"alignnone size-full wp-image-13\" alt=\"LT2_Frankfurt_IMG_0754\" src=\"https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=640&#038;h=426\" width=\"640\" height=\"426\" srcset=\"https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=640&amp;h=426 640w, https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=1278&amp;h=852 1278w, https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=150&amp;h=100 150w, https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=300&amp;h=200 300w, https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=768&amp;h=512 768w, https://oktheater.files.wordpress.com/2013/01/lt2_frankfurt_img_0754.jpg?w=1024&amp;h=683 1024w\" sizes=\"(max-width: 640px) 100vw, 640px\" /></a><i>Performances of Life and Times \u2013 Episodes 1-4 start January 16th in New York! \u00a0Full details <a href=\"http://www.sohorep.org\" target=\"_blank\">here</a>.</i></address>\n<address style=\"text-align:center;\">\u00a0</address>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Performances of Life and Times \u2013 Episodes 1-4 start January 16th in New York! \u00a0Full details here. \u00a0</p>\n",
+            "protected": false
+        },
+        "author": 42806332,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "image",
+        "meta": [],
+        "categories": [
+            1
+        ],
+        "tags": [
+            103
+        ],
+        "jetpack-related-posts": [
+            {
+                "id": 63,
+                "url": "https://oktheater.wordpress.com/lt1_frankfurt_img_7024crop/",
+                "url_meta": {
+                    "origin": 12,
+                    "position": 0
+                },
+                "title": "LT1_Frankfurt_IMG_7024crop",
+                "date": "January 1, 2013",
+                "format": false,
+                "excerpt": "",
+                "rel": "nofollow",
+                "context": "",
+                "img": {
+                    "src": "",
+                    "width": 0,
+                    "height": 0
+                },
+                "classes": []
+            }
+        ],
+        "featured_media_url": "",
+        "_links": {
+            "self": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/12"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/types/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/users/42806332"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/comments?post=12"
+                }
+            ],
+            "version-history": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/posts/12/revisions"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/media?parent=12"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/categories?post=12"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https://public-api.wordpress.com/wp/v2/sites/oktheater.wordpress.com/tags?post=12"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]
