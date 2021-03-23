@@ -2,7 +2,7 @@
   "name": "oktheater",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gibsonhdrew.github.io/oktheater",
+  "homepage": "https://oktheater.org",
   "dependencies": {
     "axios": "^0.21.1",
     "react": "^16.0.0",
