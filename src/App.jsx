@@ -41,7 +41,7 @@ class App extends Component {
     let self = this;
     var oldPosts;
     var allPosts;
-    axios.get("./oldposts3.json").then(function (response) {
+    axios.get("/oldposts3.json").then(function (response) {
       oldPosts = response.data;
     });
     axios
