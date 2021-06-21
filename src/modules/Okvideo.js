@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import okvideo from '../images/pagetitles/okvideo.png';
 import process_practice from '../images/video/process_practice.png';

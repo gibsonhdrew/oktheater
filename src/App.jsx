@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  withRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import Weareok from "./modules/Weareok";
@@ -30,6 +25,7 @@ import mailinglist from "./images/footer/mailinglist.png";
 import facebook from "./images/footer/facebook.png";
 import contact from "./images/footer/contact.png";
 import twitter from "./images/footer/twitter.png";
+import { Loading } from "./modules/Loading";
 
 class App extends Component {
   constructor(props) {
@@ -63,19 +59,10 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.wpData)
-      return (
-        <h1 style={{ marginTop: "20px", marginLeft: "10px" }}>
-          One moment please...
-        </h1>
-      );
-
     return (
       <Router>
         <div className="app">
-          <div>
-            <ScrollToTopOnNav />
-          </div>
+          <ScrollToTopOnNav />
           <Header wpData={this.state.wpData} />
           <Main wpData={this.state.wpData} />
           <Footer />
@@ -94,7 +81,7 @@ class Header extends Component {
         </Link>
         <ul className="mainNav">
           <Link className="navLink" to="/we-are-ok">
-            <img src={wereok} alt="We&#8217;re OK" className="navItem" />
+            <img src={wereok} alt="We#8217;re OK" className="navItem" />
             <div className="lineHide" />
           </Link>
           <Link className="navLink" to="/oktheater">
@@ -128,96 +115,178 @@ class Main extends Component {
   render() {
     return (
       <div className="mainBody">
-        <Route
-          exact
-          path="/"
-          render={(props) => <Splash {...props} wpData={this.props.wpData} />}
-        />
+        <Route exact path="/" component={Splash} />
+
         <Route
           exact
           path="/news"
-          render={(props) => <News {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <News {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/news/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route exact path="/we-are-ok" component={Weareok} />
+
         <Route exact path="/contacts" component={Contacts} />
 
         <Route
           exact
           path="/oktheater"
-          render={(props) => (
-            <Oktheater {...props} wpData={this.props.wpData} />
-          )}
+          render={(props) =>
+            loadWpData(
+              <Oktheater {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
         <Route
           path="/oktheater/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
 
         <Route
           exact
           path="/okvideo"
-          render={(props) => <Okvideo {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Okvideo {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           exact
           path="/okvideo/makingof"
-          render={(props) => (
-            <Okvideo_makingof {...props} wpData={this.props.wpData} />
-          )}
+          render={(props) =>
+            loadWpData(
+              <Okvideo_makingof {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/okvideo/makingof/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           exact
           path="/okvideo/processpractice"
-          render={(props) => (
-            <Okvideo_processpractice {...props} wpData={this.props.wpData} />
-          )}
+          render={(props) =>
+            loadWpData(
+              <Okvideo_processpractice {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/okvideo/processpractice/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           exact
           path="/okvideo/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
 
         <Route
           exact
           path="/okradio"
-          render={(props) => <Okradio {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Okradio {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/okradio/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
 
         <Route
           exact
           path="/okbooks"
-          render={(props) => <Okbooks {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Okbooks {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/okbooks/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
 
         <Route
           exact
           path="/okmoto"
-          render={(props) => <Okmoto {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Okmoto {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
+
         <Route
           path="/okmoto/:ok"
-          render={(props) => <Post {...props} wpData={this.props.wpData} />}
+          render={(props) =>
+            loadWpData(
+              <Post {...props} wpData={this.props.wpData} />,
+              this.props.wpData
+            )
+          }
         />
       </div>
     );
@@ -275,5 +344,7 @@ const FooterLink = (props) => (
 );
 
 const ScrollToTopOnNav = () => <Route component={ScrollToTop} />;
+
+const loadWpData = (component, wpData) => (wpData ? component : <Loading />);
 
 export default App;

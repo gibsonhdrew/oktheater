@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
-import okvideo from '../images/pagetitles/okvideo.png';
-import process_practice from '../images/video/process_practice.png';
 import animations from '../images/video/animations.jpg';
-import trailers from '../images/video/trailers.png';
-import making_of from '../images/video/making_of.jpg';
 import berlin_screen_tests from '../images/video/berlin_screen_tests.png';
 import nb_thumb from '../images/makingof-thumbs/nibelungen.jpg';
 import d2071 from '../images/makingof-thumbs/deutschland.jpg';

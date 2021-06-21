@@ -119,7 +119,7 @@ class Post extends Component {
                 for (let w=0;w<wpBlogLinks.length;w++) {
 
                     // hack for one of the news posts
-                    if (wpBlogLinks[0] == "https://oktheatersite.wordpress.com/2018/02/23/kinder-der-toten/>Die") {
+                    if (wpBlogLinks[0] === "https://oktheatersite.wordpress.com/2018/02/23/kinder-der-toten/>Die") {
                       wpBlogLinks.shift();
                     }
 

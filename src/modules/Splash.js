@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import hr4 from "../images/hr4.png";
-import kafka from "../images/kafka.jpg";
 import kafkatyped from "../images/kafkatyped.png";
 
 class Splash extends Component {
@@ -31,6 +30,7 @@ class Splash extends Component {
             <img
               className="kafka_typed fades"
               src={kafkatyped}
+              alt="kafka"
               style={{
                 position: "absolute",
                 top: "20px",
@@ -71,6 +71,7 @@ class Splash extends Component {
               <br />
               <img
                 src={hr4}
+                alt="hr"
                 style={{
                   width: "35%",
                   display: "block",
