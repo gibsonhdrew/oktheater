@@ -57,13 +57,13 @@ class Home extends Component {
 
         var thumbImgUrlsTh = []
         let imgArray1Th = postsTh[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray1Th[imgArray1Th.length-1])
+        thumbImgUrlsTh.push(imgArray1Th[imgArray1Th.length-1].replace('src="',''));
         let imgArray2Th = postsTh[3].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray2Th[imgArray2Th.length-1])
+        thumbImgUrlsTh.push(imgArray2Th[imgArray2Th.length-1].replace('src="',''));
         let imgArray3Th = postsTh[5].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray3Th[imgArray3Th.length-1])
+        thumbImgUrlsTh.push(imgArray3Th[imgArray3Th.length-1].replace('src="',''));
         let imgArray4Th = postsTh[7].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray4Th[imgArray4Th.length-1])
+        thumbImgUrlsTh.push(imgArray4Th[imgArray4Th.length-1].replace('src="',''));
  
         for (let i=0;i<3;i++){
             thumbPosts.push({post: previousPostsTh[i], slug: previousSlugsTh[i], img: thumbImgUrlsTh[i]})
