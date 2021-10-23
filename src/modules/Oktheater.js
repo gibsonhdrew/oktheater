@@ -23,7 +23,7 @@ class Oktheater extends Component {
         let imgArray = data[i].content.rendered
           .match('data-orig-file=\\"https://(.*).jpg')[0]
           .split(" ");
-        postImages.push(imgArray[imgArray.length - 1].replace('src="', ""));
+        postImages.push(imgArray[imgArray.length - 1].replace('src="', "").replace('data-orig-file="', ''));
       }
     }
     for (let i = 0; i < postImages.length; i++) {
