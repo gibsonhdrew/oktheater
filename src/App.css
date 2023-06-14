@@ -237,6 +237,10 @@ p a {
     opacity: 0.9;
 }
 
+.pageBody figure, .pageBody blockquote {
+    margin: 0;
+}
+
 .backButton {
     max-height: 25px;
     width: auto;
