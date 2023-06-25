@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import Weareok from "./modules/Weareok";
@@ -60,7 +60,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="/">
         <div className="app">
           <ScrollToTopOnNav />
           <Header wpData={this.state.wpData} />
