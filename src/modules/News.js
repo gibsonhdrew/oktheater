@@ -53,7 +53,7 @@ class Home extends Component {
         var thumbPosts = []
         var newsPosts = []
         let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        let imgUrl = imgArray[imgArray.length-1]
+        let imgUrl = imgArray[imgArray.length-1].replace('src="','');
 
         var thumbImgUrlsTh = []
         let imgArray1Th = postsTh[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
