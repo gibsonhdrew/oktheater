@@ -52,23 +52,26 @@ class Home extends Component {
         }
         var thumbPosts = []
         var newsPosts = []
-        let imgArray = posts[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        let imgUrl = imgArray[imgArray.length-1].replace('src="','');
+        let imgMatch = posts[1] && posts[1].match('data-orig-file=\\"https://(.*).jpe?g');
+        let imgArray = imgMatch ? imgMatch[0].split(' ') : [];
+        let imgUrl = imgArray.length ? imgArray[imgArray.length-1].replace('src="','') : '';
 
         var thumbImgUrlsTh = []
-        let imgArray1Th = postsTh[1].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray1Th[imgArray1Th.length-1].replace('src="','').replace('data-orig-file="', ''));
-        let imgArray2Th = postsTh[3].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray2Th[imgArray2Th.length-1].replace('src="','').replace('data-orig-file="', ''));
-        let imgArray3Th = postsTh[5].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray3Th[imgArray3Th.length-1].replace('src="','').replace('data-orig-file="', ''));
-        let imgArray4Th = postsTh[7].match('data-orig-file=\\"https://(.*).jpg?')[0].split(' ')
-        thumbImgUrlsTh.push(imgArray4Th[imgArray4Th.length-1].replace('src="','').replace('data-orig-file="', ''));
+        function extractThumbImg(content) {
+            let m = content && content.match('data-orig-file=\\"https://(.*).jpe?g');
+            if (!m) return '';
+            let arr = m[0].split(' ');
+            return arr[arr.length-1].replace('src="','').replace('data-orig-file="', '');
+        }
+        thumbImgUrlsTh.push(extractThumbImg(postsTh[1]));
+        thumbImgUrlsTh.push(extractThumbImg(postsTh[3]));
+        thumbImgUrlsTh.push(extractThumbImg(postsTh[5]));
+        thumbImgUrlsTh.push(extractThumbImg(postsTh[7]));
  
         for (let i=0;i<3;i++){
             thumbPosts.push({post: previousPostsTh[i], slug: previousSlugsTh[i], img: thumbImgUrlsTh[i]})
         }
-        for (let i=0;i<8;i++){
+        for (let i=0;i<7;i++){
             newsPosts.push({post: previousPosts[i], slug: previousSlugs[i]})
         }
         this.setState({ 

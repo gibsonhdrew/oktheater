@@ -20,9 +20,9 @@ class Oktheater extends Component {
         // wp tag 'theater'
         postTitles.push(data[i].title.rendered);
         slugs.push(data[i].slug);
-        let imgArray = data[i].content.rendered
-          .match('data-orig-file=\\"https://(.*).jpg')[0]
-          .split(" ");
+        let match = data[i].content.rendered.match('data-orig-file=\\"https://(.*).jpe?g');
+        if (!match) continue;
+        let imgArray = match[0].split(" ");
         postImages.push(imgArray[imgArray.length - 1].replace('src="', "").replace('data-orig-file="', ''));
       }
     }
